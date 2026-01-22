@@ -1,20 +1,30 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-title: COMP221 - Algorithm Design & Analysis (Spring 2025) 
+title: COMP221 - Algorithm Design & Analysis (Spring 2026) 
 author: Suhas Arehalli
 category: Syllabus
 layout: post
 ---
 
-Welcome to the COMP221 (Algorithm Design & Analysis) Course Page. For course policies, please check the [syllabus](https://docs.google.com/document/d/1P9VY0hKVDXovrCSrKR945ABx7OEdYHeL6emMn3wPva0/edit?usp=sharing). 
-
+Welcome to the COMP221 (Algorithm Design & Analysis) Course Page. For course policies, please check the [syllabus](https://docs.google.com/document/d/1PG1b4zjEanR0XgWdJeIcvYNZT_LwgkeP0a0kTatZBlY/edit?usp=sharing).
 
 ### Resources
 
 #### Office Hours
 Me and the preceptors will hold OH from the 2nd week of the semester onward. Times can be found [in this google calendar](https://calendar.google.com/calendar/u/0?cid=Y183Y2IzMjliOTYxY2ZlM2YyNDZmZDBkNzQzNmM4OTE4YWI2OWEyZTY4MTBiNGU1MjAwNWU1MjUxM2ExNzdkYTIyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20). If posted times don't work for you, please email me and we can schedule a separate meeting!
+
+#### Textbook
+Our primary text this semester will be *Algorithms* by Jeff Erickson, which is freely accessible [here](https://jeffe.cs.illinois.edu/teaching/algorithms/). There will occasionally be a reading from me or another source which will be linked below. 
+
+Note that many of the readings (particularly the ones early on) suggest skimming or previewing my lecture notes ahead of time. You are meant to see the materials multiple times from multiple perspectives, and my notes are more thorough (and often more tedious) than what I can reasonably get through in lecture, so you should (even when not explicitly asked) look ahead to my notes and identify areas where you need more clarity in-class.
+
+For additional reference, I recommend...
+
+*The Algorithm Design Handbook* by Steve Skiena, which we used in prior semesters. This book focuses more on implementation details and practical design tips.
+*Introduction to Algorithms* by Cormen, Leiserson, Rivest, \& Stein (colloquially called CLRS). This book prioritizes formal, rigorous analysis and is a bit dense.
+
+For background material on the formal mathematical tools we'll be using, you should reference your notes and textbook from Discrete Mathematics first. In addition, I recommend (and will have you read from) 
+
+**Building Blocks for Theoretical Computer Science** by Margaret M. Fleck, available online [here](https://mfleck.cs.illinois.edu/building-blocks/). I will link to version 1.3b simply because of it's pdf format.
 
 ### Schedule
 The schedule below will be updated to keep track of all released course materials. Keep in mind that I may shift planned topics to adjust pace as necessary. 
@@ -23,116 +33,53 @@ The schedule below will be updated to keep track of all released course material
 
 | Week | Date | Topic | Reading | Materials |
 | :-: | :- | :- | -: | :- |
-| 0 | FRI 1/24 | Course Overview | NA | [Beginning-of-Semester Survey](https://docs.google.com/forms/d/e/1FAIpQLScDKtLwncty4q2UVQHeikCHnr1FIOFyebtu2vbyejMzGehg_Q/viewform?usp=sharing) |
-| 1 | MON 1/27 | Mathematical Foundations | Skiena 2.1, 2.6--2.8, [Proof-Writing Guide]({{site.url}}/notes/ProofGuide.pdf)  | [Activity 1](pages/Activity01)  |
-| - | WED 1/29 | Big-O(h) Analysis  | Skiena 2.2--2.4 | |
-| - | FRI 1/31 | Big-O(h) Analysis  | -  | [Activity: Sorting](pages/Activity01), [Time Complexity Notes]({{site.url}}/notes/TimeComplexity.pdf)  |
-| 2 | MON 2/03 | Proofs of Correctness (Loop Invariants) | Skiena 1.3--1.4, 1.6. Skim 2.5  |[Tao on rigor](https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/)  |
-| - | WED 2/05 | Proofs of Correctness (Loop Invariants 2) |  |  |
-| - | FRI 2/07 | Proofs of Correctness (Recursion)  | Skiena 3.1--3.2 | [Optional Activity: BubbleSort](pages/Activity03), [Correctness Notes]({{site.url}}/notes/Correctness.pdf) |
-| 3 | MON 2/10 | Brute Force Algorithms & DS Review | Skiena 3.3--3.7, 7.1--7.2  | [Activity: DS Review](pages/Activity06) |
-| - | WED 2/12 | Sorting: Tree/HeapSort | Skiena 4.1--4.3 | [Activity: Heaps & TreeSort](pages/Activity07)  |
-| - | FRI 2/14 | Sorting: MergeSort | \*Skiena 4.5  | [Activity: Sorting as Pre-Processing](pages/Activity08), [MergeSort Notes]({{site.url}}/notes/MergeSort.pdf)  |
-| 4 | MON 2/17 | Sorting: QuickSort | Skiena 4.6 |  [Optional Activity: Partition and Quicksort](pages/Activity09) |
-| - | WED 2/19 | Exam Review | |  |
-| - | FRI 2/21 | **Exam 1** |  | |
-| 5 | MON 2/24 | Recursion & Binary Search Variants | \*Skiena 5.1--5.3 | [Activity: Binary Search Variants](pages/Activity10) |
-| - | WED 2/26 | The Master Theorem | Skiena 5.4 | [Activity: Master Theorem](pages/Activity11) | 
-| - | FRI 2/28 | **NO CLASS: CAPSTONES** | | |
-| 6 | MON 3/03 | Divide and Conquer Algorithms | \*5.5--5.6 | |
-| - | WED 3/05 | Graphs: BFS (& DFS Variants) | \*7.5--7.10 | [BFS  Notes]({{site.url}}/notes/BFS.pdf)  |
-| - | FRI 3/07 | Greedy Algorithms: Prim's and MSTs | \*8.1 | |
-| 7 | MON 3/10 | Kruskal's & Union-Find | | [MST Notes]({{site.url}}/notes/MSTs.pdf) |
-| - | WED 3/12 | Djikstra's and the Shortest Path Problem | 8.3.1 | [Dijkstra  Notes]({{site.url}}/notes/Dijkstra.pdf) |
-| - | FRI 3/14 | Floyd-Warshall & APSP | \*8.3.2 | |
+| 0 | FRI 1/23 | No Class  | [Syllabus](https://docs.google.com/document/d/1PG1b4zjEanR0XgWdJeIcvYNZT_LwgkeP0a0kTatZBlY/edit?usp=sharing) | [Beginning-of-Semester Survey]() |
+| 1 | MON 1/26 | Mathematical Foundations (Proofs) | Skim [Fleck Ch.1](https://mfleck.cs.illinois.edu/building-blocks/updates-fa2017/math-review.pdf), [Fleck Ch.3](https://mfleck.cs.illinois.edu/building-blocks/version-1.3/proofs.pdf), [Proof-Writing Guide]({{site.url}}/notes/ProofGuide.pdf)  |  |
+| - | WED 1/28 | Big-O(h) Analysis  | [Fleck 14.1, 14.5--14.8](https://mfleck.cs.illinois.edu/building-blocks/updates-fa2017/big-o.pdf), skim [Time Complexity Notes]({{site.url}}/notes/TimeComplexity.pdf) | |
+| - | FRI 1/30 | Big-O(h) Analysis Lab  | -  | [Activity: Sorting](pages/ActivitySort)  |
+| 2 | MON 2/02 | Proofs of Correctness (Iteration/Loop Invariants) | CLRS 2.1 (Moodle), Preview [Loop Invariants Notes]({{site.url}}/notes/CorrectnessAndLoopInvariants.pdf)  |[Tao on rigor](https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/)  |
+| - | WED 2/04 | Proofs of Correctness (Recursion) | [Recursive Correctness Notes]({{site.url}}/notes/CorrectnessRecursion.pdf)  |  |
+| - | FRI 2/06 | Proofs of Correctness Lab  | -  | [Activity: BubbleSort](pages/ActivityBS) |
+| 3 | MON 2/09 | Revisiting Data Structures (Trees & Self-Balancing) | Preview [DS Notes]({{site.url}}/notes/DSReview.pdf) on AVL Trees  | |
+| - | WED 2/11 | Revisiting Data Structures (Array Stack & Amortization) | Preview [DS Notes]({site.url}}/notes/DSReview.pdf) on Amortization |   |
+| - | FRI 2/13 | Sorting: (Heap-/Tree- Sorts) |   | [Activity: DS Sort Activity](pages/Activity7)
+| 4 | MON 2/16 | Sorting: MergeSort | Erickson 1.4, Preview [MergeSort Notes]({{site.url}}/notes/MergeSort.pdf) |  |
+| - | WED 2/18 | Sorting: QuickSort | Erickson 1.5, Preview [QuickSort Notes]({{site.url}}/notes/QuickSort.pdf) | [Optional Activity: Partition and Quicksort](pages/ActivityQS) |
+| - | FRI 2/20 | **Exam 1** |  | |
+| 5 | MON 2/23 | Divide & Conquer (Binary Search) | Erickson 1.6 | [Activity: Binary Search Variants](pages/ActivityBS) |
+| - | WED 2/25 | The Master Theorem | Erickson 1.7, Preview [Master Theorem Notes]({{site.url}}/notes/MasterTherorem.pdf) | [Activity: Master Theorem](pages/ActivityMT) | 
+| - | FRI 2/27 | More Divide & Conquer Design  | Erickson 1.9--1.10 | [Activity: Divide & Conquer](pages/ActivityDC) |
+| 6 | MON 3/02 | Greedy Algorithms | Erickson 4.1--4.3 | |
+| - | WED 3/04 | Graphs: BFS | Skim Erickson 5.1--5.4, Then Erickson 8.1--8.4  | [BFS  Notes]({{site.url}}/notes/BFS.pdf)  |
+| - | FRI 3/06 | **Capstones** | | |
+| 7 | MON 3/09 | SSSP: Dijkstra's | Erickson 8.6 + Skim [Dijkstra Notes]({{site.url}}/notes/Dijkstra.pdf) | |
+| - | WED 3/11 | MSTs: Prims | Erickson 7.1--7.2, 7.4, Preview [MST  Notes]({{site.url}}/notes/MSTs.pdf) on Prim's | |
+| - | FRI 3/13 | MSTs: Kruskal's & Union-Find | Erickson 7.5, Preview [MST Notes]({{site.url}}/notes/MSTs.pdf) on Kruskal's | |
 | 8 | - | **SPRING BREAK** | | |
-| 9 | MON 3/24 | The Max-Flow Problem & Bipartite Matching | 8.5 | |
-| - | WED 3/26 | Max-Flow = Min-Cut and Ford-Fulkerson | \*8.5.2 | [Ford-Fulkerson Notes]({{site.url}}/notes/NetworkFlow.pdf) |
-| - | FRI 3/28 | Graph Modeling as a Design Principle | 8.7 | [Graph Application Activity](pages/GraphApplications) |
-| 10 | MON 3/31 | Exam Review | | |
-| - | WED 4/02 | **Exam 2** | | |
-| - | FRI 4/04 | Dynamic Programming | 10.1 | [Dynamic Programming Activity 1]({{site.url}}/pages/Activity18) |
-| 11 | MON 4/07 | Approximate String Match | \*10.2 | [Dynamic Programming Activity 2]({{site.url}}/pages/Activity19) |
-| - | WED 4/09 | Subset Sum | \*10.5 | |
-| - | FRI 4/11 | CKY Parsing | \*10.8 | [Dynamic Programming Notes]({{site.url}}/notes/DynamicProgramming.pdf) |
-| 12 | MON 4/14 | Combinatorial Methods 1 | 9.1--9.3, 9.6--9.7 | |
-| - | WED 4/16 | Combinatorial Methods 2 | | |
-| - | FRI 4/18 | Intro to Complexity Theory | 11.1 | |
-| 13 | MON 4/21 | Reduction as a Proof Technique | 11.2--11.3 | |
-| - | WED 4/23 | Reductions and SAT | \*11.4--11.6 | |
-| - | FRI 4/25 | P vs. NP | 11.9 | [Complexity Theory Notes]({{site.url}}/notes/ComplexityTheoryAndReductions.pdf) |
-| 14 | MON 4/28 | Approximate Methods for Hard Problems | 12.1--12.3, 12.5 | |
-| - | WED 4/30 | Complexity Review | | |
-| - | FRI 5/02 | Report Peer Review   | | |
-| 15 | MON 5/05 | **Exam 3** | | |
-| FINALS | FRI 5/09 <br> 1:30--3:30pm | Section 01 Final | | |
-| FINALS | SAT 5/10 <br> 1:30--3:30pm | Section 02 Final | | |
+| 9 | MON 3/23 | APSP: Floyd-Warshall | Erickson 9.1--9.2, 9.8 | |
+| - | WED 3/25 | Max-Flow = Min-Cut | Erickson 10.1 -- 10.3 | [Ford-Fulkerson Notes]({{site.url}}/notes/NetworkFlow.pdf) |
+| - | FRI 3/27 | Ford-Fulkerson | 10.4 -- 10.6 | |
+| 10 | MON 3/30 | Flex Day | | [Graph Application Activity](pages/GraphApplications) |
+| - | WED 4/01 | **Exam 2** | | |
+| - | FRI 4/03 |  Backtracking & Combinatorial Search | Erickson 2.1--2.4 | |
+| 11 | MON 4/06 | Dynamic Programming | Erickson 3.1--3.4 | [Dynamic Programming Activity 1]({{site.url}}/pages/Activity18) |
+| - | WED 4/08 | Approximate String Match | Erickson 3.7 |  |
+| - | FRI 4/10 | Subset Sum | Erickson 3.8 | |                                                                      
+| 12 | MON 4/13 | CKY Parsing | TBD  | [Dynamic Programming Notes]({{site.url}}/notes/DynamicProgramming.pdf) |           
+| - | WED 4/15 | Dynamic Programming Lab | [Dynamic Programming Activity 2]({{site.url}}/pages/Activity19) | 
+| - | FRI 4/17 | Intro to Complexity Theory | Erickson 12.1--12.3 | |
+| 13 | MON 4/20 | Reduction as a Proof Technique | Erickson 12.5--12.6 | |
+| - | WED 4/22 | More NP Reductions | Erickson 12.6--12.9 | |
+| - | FRI 4/24 | Flex Day | | |
+| 14 | MON 4/27 | Complexity Lab | Erickson 12.13--12.14 | [Complexity Theory Notes]({{site.url}}/notes/ComplexityTheoryAndReductions.pdf) |
+| - | WED 4/29 | Approximate/Random Methods for Hard Problems | TBD | |
+| - | FRI 5/01 | Report Peer Review   | | |
+| 15 | MON 5/04 | **Exam 3** | | |
+| FINALS | THU 5/07 <br> 1:30--3:30pm | Section 01 Final | | |
+| FINALS | FRI 5/08 <br> 4:00--6:00pm | Section 02 Final | | |
 
 </div> 
 \*s indicate the presence of an assigned reading problem. Enrolled students should see the Moodle to complete the problem before classtime.
 
 ### Homeworks
 Solutions for written assignments should be submitted through Moodle. Solutions for programming assignments should be submitted through the Github Classroom, which can be joined through Moodle. 
-
-#### Homework 0
-**OUT:** 1/24
-**DUE:** 2/3 9pm. 
-
-[instructions]({{site.url}}/hws/COMP221_HW0.pdf) | [TeX]({{site.url}}/hws/COMP221_HW0.tex)
-
-#### Homework 1
-**Out:** 2/4
-**Due:** 2/10 9pm.
-
-[instructions]({{site.url}}/hws/COMP221_HW1.pdf) | [TeX]({{site.url}}/hws/COMP221_HW1.tex)
-
-Notes: A prior version of the assignment had problem 3 state that $c$ should be summed up to $i=n$. It has been corrected to $i=k$. 
-
-#### Homework 2
-**Out:**: 2/11
-**Due:**: 2/17 9pm. 
-
-[instructions]({{site.url}}/hws/COMP221_HW2.pdf) | [TeX]({{site.url}}/hws/COMP221_HW2.tex)
-
-#### Programming Assignment 1 - Sorting
-**Out:** 2/25
-**Due:** 3/4 11:59pm
-
-**Enrolled Students should accept the Github Classroom Link Posted on Moodle and work in that repository**
-
-[Starter Code + Instructions (for reference)](https://github.com/mac-comp221-sp25/PA1-Sorting)
-
-#### Homework 3
-**Out:**: 3/11
-**Due:**: 3/25 9pm
-
-Notes: The instructions for these two problems are quite long, but critical. Please read them carefully and ensure you understand what's going on before starting work on the problems themselves. Many subparts are straightforward when understood but daunting when approached with a partial effort. 
-
-[instructions]({{site.url}}/hws/COMP221_HW3.pdf) | [TeX]({{site.url}}/hws/COMP221_HW3.tex)
-
-#### Programming Assignment 2 - MSTs and Union-Find
-**Out:** 4/5
-**Due:** 4/14 11:59pm
-
-**Enrolled Students should accept the Github Classroom Link Posted on Moodle and work in that repository**
-
-[Starter Code + Instructions (for reference)](https://github.com/mac-comp221-sp25/PA2-MSTs)
-
-#### Homework 4
-**Out:**: 4/21
-**Due:**: 4/30 9pm
-
-Notes: A prior version of this assignment was vague about the greedy strategy for Prob. 1. It has been updated to reflect that I don't mean this to be unncessarily vague --- the greedy strategy simply repeatedly adds the largest valued coin that does not overshoot $k$ to our multiset!
-
-[instructions]({{site.url}}/hws/COMP221_HW4.pdf) | [TeX]({{site.url}}/hws/COMP221_HW4.tex)
-
-### Final Report and Presentation
-**Instructions Out:** 4/7 \\
-**Topic Proposal:** 4/14 \\
-**In-class Peer-Review:**: 5/02 \\
-**Final Report Due:** 11:59PM before Final Exam Slot \\
-**Final Presentation:** Final Exam Slot
-
-[Instructions]({{site.url}}/hws/COMP221_FinalReportInstructions.pdf) | [Sample Report]({{site.url}}/hws/COMP221_FinalReportSample.pdf) | [Sample Report TeX]({{site.url}}/hws/COMP221_FinalReportSample.tex) | 
-
-Note: In the interest of giving you (and me, in the sample report!) a bit more space, the page requirement now allows for 5-page submissions.
