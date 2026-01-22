@@ -19,15 +19,15 @@ Note that many of the readings (particularly the ones early on) suggest skimming
 
 For additional reference, I recommend...
 
-*The Algorithm Design Handbook* by Steve Skiena, which we used in prior semesters. This book focuses more on implementation details and practical design tips.
-*Introduction to Algorithms* by Cormen, Leiserson, Rivest, \& Stein (colloquially called CLRS). This book prioritizes formal, rigorous analysis and is a bit dense.
+ - *The Algorithm Design Handbook* by Steve Skiena, which we used in prior semesters. This book focuses more on implementation details and practical design tips.
+ - *Introduction to Algorithms* by Cormen, Leiserson, Rivest, \& Stein (colloquially called CLRS). This book prioritizes formal, rigorous analysis and is a bit dense.
 
 For background material on the formal mathematical tools we'll be using, you should reference your notes and textbook from Discrete Mathematics first. In addition, I recommend (and will have you read from) 
 
-**Building Blocks for Theoretical Computer Science** by Margaret M. Fleck, available online [here](https://mfleck.cs.illinois.edu/building-blocks/). I will link to version 1.3b simply because of it's pdf format.
+ - *Building Blocks for Theoretical Computer Science* by Margaret M. Fleck, available online [here](https://mfleck.cs.illinois.edu/building-blocks/). I will link to version 1.3b simply because of it's pdf format.
 
 ### Schedule
-The schedule below will be updated to keep track of all released course materials. Keep in mind that I may shift planned topics to adjust pace as necessary. 
+The schedule below will be updated to keep track of all released course materials. Keep in mind that I may shift planned topics to adjust pace.
 
 <div class="table-wrapper" markdown="block">
 
@@ -39,7 +39,7 @@ The schedule below will be updated to keep track of all released course material
 | - | FRI 1/30 | Big-O(h) Analysis Lab  | -  | [Activity: Sorting](pages/ActivitySort)  |
 | 2 | MON 2/02 | Proofs of Correctness (Iteration/Loop Invariants) | CLRS 2.1 (Moodle), Preview [Loop Invariants Notes]({{site.url}}/notes/CorrectnessAndLoopInvariants.pdf)  |[Tao on rigor](https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/)  |
 | - | WED 2/04 | Proofs of Correctness (Recursion) | [Recursive Correctness Notes]({{site.url}}/notes/CorrectnessRecursion.pdf)  |  |
-| - | FRI 2/06 | Proofs of Correctness Lab  | -  | [Activity: BubbleSort](pages/ActivityBS) |
+| - | FRI 2/06 | Proofs of Correctness Lab  | -  | [Activity: Sorting 2](pages/ActivityLoopInv) |
 | 3 | MON 2/09 | Revisiting Data Structures (Trees & Self-Balancing) | Preview [DS Notes]({{site.url}}/notes/DSReview.pdf) on AVL Trees  | |
 | - | WED 2/11 | Revisiting Data Structures (Array Stack & Amortization) | Preview [DS Notes]({site.url}}/notes/DSReview.pdf) on Amortization |   |
 | - | FRI 2/13 | Sorting: (Heap-/Tree- Sorts) |   | [Activity: DS Sort Activity](pages/Activity7)
