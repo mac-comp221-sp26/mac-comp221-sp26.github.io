@@ -42,7 +42,7 @@ The schedule below will be updated to keep track of all released course material
 | - | FRI 2/06 | Proofs of Correctness Lab  | -  | [Activity: Sorting 2](pages/ActivityLoopInv) |
 | 3 | MON 2/09 | Revisiting Data Structures (Trees & Self-Balancing) | Preview [DS Notes]({{site.url}}/notes/DSReview.pdf) on AVL Trees  | |
 | - | WED 2/11 | Revisiting Data Structures (Array Stack & Amortization) | Preview [DS Notes]({site.url}}/notes/DSReview.pdf) on Amortization |   |
-| - | FRI 2/13 | Sorting: (Heap-/Tree- Sorts) |   | [Activity: DS Sort Activity](pages/Activity7)
+| - | FRI 2/13 | Sorting: (Heap-/Tree- Sorts) |   | [Activity: DS Sort Activity](pages/ActivityHS)
 | 4 | MON 2/16 | Sorting: MergeSort | \*Erickson 1.4, Preview [MergeSort Notes]({{site.url}}/notes/MergeSort.pdf) |  |
 | - | WED 2/18 | Sorting: QuickSort | \*Erickson 1.5, Preview [QuickSort Notes]({{site.url}}/notes/QuickSort.pdf) | [Optional Activity: Partition and Quicksort](pages/ActivityQS) |
 | - | FRI 2/20 | **Exam 1** |  | |
@@ -83,3 +83,11 @@ The schedule below will be updated to keep track of all released course material
 
 ### Homeworks
 Solutions for written assignments should be submitted through Moodle. Solutions for programming assignments should be submitted through the Github Classroom, which can be joined through Moodle. 
+
+#### Homework 0
+The goal of this assignment is to review material from Data Structures and Discrete Math.
+
+**Out:** Mon. 1/26
+**Due:** Mon. 2/02 9pm on Moodle
+
+[Instructions]({{site.url}}/hws/COMP221_HW0.pdf) | [Tex]({{site.url}}/hws/COMP221_HW0.tex)

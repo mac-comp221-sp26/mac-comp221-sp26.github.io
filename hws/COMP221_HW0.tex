@@ -13,7 +13,7 @@
 
 \title{HW0: Review}
 \author{COMP 221 --- Suhas Arehalli}
-\date{Spring 2025}
+\date{Spring 2026}
 
 \begin{document}
 
@@ -38,14 +38,14 @@ Keep in mind the following when completing the assignment:
         \sum_{i = 1}^n i = \frac{1}{2}n(n+1).
     \end{align*}
 
-    \question \textit{(Data Structures)} Determine the growth function for the algorithm \ref{alg:sample}. For simplicity, you need only have the growth function count the number of times $x$ is incremented. 
+    \question \textit{(Data Structures)} Determine the growth function for the algorithm \ref{alg:sample} in terms of $n$. For simplicity, you need only have the growth function count the number of times $x$ is incremented. 
 
         \begin{algorithm}
-        \caption{Sample algorithm}
+        \caption{Mysterious Algorithm}
         \label{alg:sample}
         \begin{algorithmic}
             \State $x \gets 0$
-            \For{$i \gets 1$ to $N$}
+            \For{$i \gets 1$ to $n$}
                 \For{$j \gets 1$ to $i$}
                     \State $x \gets x + 1$
                 \EndFor
@@ -54,10 +54,10 @@ Keep in mind the following when completing the assignment:
         \end{algorithmic}
     \end{algorithm}
 
-    \question \textit{(Data Structures)} Provide the best Big-O worst-case time complexity for algorithm \ref{alg:sample}. 
+    \question \textit{(Data Structures)} Provide the worst-case time complexity for algorithm \ref{alg:sample} in Big-$O$ notation. This should be \textit{best possible} (i.e., slowest growing) Big-$O$ that you can provide.\footnote{i.e., don't just write $O(n!)$ and call it a day.}
 
     \question \textit{(Data Structures)} Consider the following pseudocode for a purported sorting algorithm.
-    Does this algorithm work? Why? What is it's worst-case time complexity, assuming we use a type of self-balancing BST you saw in Data Structures. 
+    Does this algorithm work? Why? What is it's worst-case time complexity, assuming we use a type of self-balancing BST you saw in Data Structures?
 
     \begin{algorithm}
         \caption{Sort Pseudocode A}
@@ -70,9 +70,9 @@ Keep in mind the following when completing the assignment:
         \end{algorithmic}
     \end{algorithm}
 
-    \question \textit{(Discrete Math/Data Structures)} Consider a Graph $G = (V, E)$. Recall that the degree of a vertex $v \in V$, notated $d(v)$, is the number of edges that are incident to/connect to $v$ (set aside self-edges for now). Prove (by whatever means) that $\sum_{v \in V} d(v)$ is even. Further, prove that the sum of the degrees of all odd-degree vertices, $\sum_{v \in V, d(v) odd} d(v)$, is even.
+    \question \textit{(Discrete Math/Data Structures)} Consider a Graph $G = (V, E)$ with no self-edges. Recall that the degree of a vertex $v \in V$, notated $d(v)$, is the number of edges that are incident to/connect to $v$. Prove that $\sum_{v \in V} d(v)$ is even. Further, prove that the sum of the degrees of all odd-degree vertices, $\sum_{v \in V, d(v) odd} d(v)$, is even.
 
-    \textit{HINT: Consider a graph with 0 edges. Compute the sum of degrees of all vertices. How do the degrees change when you add a single edge?}
+    \textit{HINT: Do this via induction on the number of \textit{edges}.}
 \end{questions}
 
 \end{document}
