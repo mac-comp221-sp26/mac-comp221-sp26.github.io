@@ -15,7 +15,7 @@
 \printanswers
 
 \title{Homework 1}
-\author{COMP221 Spring 2024 - Suhas Arehalli}
+\author{COMP221 Spring 2025 - Suhas Arehalli}
 \date{}
 
 \begin{document}
@@ -55,11 +55,11 @@ Complete the problems below. Note that point values are roughly inversely correl
     Of course, the above only shows that this works for quadratic time algorithms. Let's extend it to all polynomials: Show that if
     \begin{align*}
         f(n) &= \sum_{i=0}^k a_in^i \\
-             &= a_kn^i + \dots + a_1n + a_0
+             &= a_kn^k + \dots + a_1n + a_0
     \end{align*}
     for some $a_i \in \mathbb{Z}$, then $f(n) \in O(n^k)$. Use the $c, n_0$ definition of big-O. Note I'm only asking for big-$0$ here, not big-$\Theta$!
 
-    \textbf{HINT}: We'll need a slightly different strategy (one more general than the small bounding trick I suggested for quadratics). Consider $c = \sum_{i=0}^n |a_i|$. Can you see a way to show $cn^k \geq f(n)$ for all $n \geq$ some $n_0$?
+    \textbf{HINT}: We'll need a slightly different strategy (one more general than the small bounding trick I suggested for quadratics). Consider $c = \sum_{i=0}^k |a_i|$. Can you see a way to show $cn^k \geq f(n)$ for all $n \geq$ some $n_0$?
 \end{questions}
 
 \end{document}
