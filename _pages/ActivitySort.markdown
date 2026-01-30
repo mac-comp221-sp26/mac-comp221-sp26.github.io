@@ -17,13 +17,13 @@ You will work towards being able to...
 Using our formal definition of Big-$O$...
 
 1. Show that $f(n) = \log n \in O(n)$. 
-    * *Note*: When the inequality is obvious is a matter of contentious, but interpreting logarithms is strange but interpreting exponents is easier. If there is something that looks provable via induction like in Fleck, you can stop for now!  
+    1. *Note*: When the inequality is obvious is a matter of contentious debate (depends on the audience!), but interpreting logarithms is strange but interpreting exponents is easier. If there is something that looks provable via induction like in Fleck, you can stop for now!  
 
 2. Show that $g(n) = n + \log n \in O(n)$. 
-    * *Hint*: Can the previous problem help you?
+    1. *Hint*: Can the previous problem help you?
 
 3. Now let's get a big more abstract: Consider non-negative functions $f, g$ such that $f(n) \in O(g(n))$. Show that $f(n) + g(n) \in O(g(n))$. 
-    * *Hint*: Use the definition of Big-O to give you more information about the relationship between $f$ and $g$!
+    1. *Hint*: Use the definition of Big-O to give you more information about the relationship between $f$ and $g$!
 
 
 ### Activity Instructions
