@@ -8,13 +8,18 @@ categories: Activity Sorting
 
 You will work towards being able to...
 
-1. Formalize algorithmic ideas into pseudocode
-2. Compute growth functions from time & space complexities under the RAM model 
-3. Know common algorithms to solve cannonical problems (sorting)
+1. Prove Big-$O, \Omega, \Theta$ from definition.
+2. Formalize algorithmic ideas into pseudocode
+3. Compute growth functions from time & space complexities under the RAM model 
+4. Know common algorithms to solve cannonical problems (sorting)
 
 ### Warm-Up
 
-1. Suppose you have an unsorted array of $n$ unique integers, each between $1$ and $n+1$. Naturally, there is a single integer between $1$ and $n+1$ missing. Find an algorithm that runs in $O(n)$ time and *constant space* complexity that finds that missing number. **HINT**: Note that the textbook lists this problem under the *Summation* subheading.  
+1. Show that $f(n) = \log n \in O(n)$. 
+
+2. Show that $g(n) = n + \log n \in O(n)$.
+
+3. Now let's get a big more abstract: Consider non-negative functions $f, g$ such that $f(n) \in O(g(n))$. Show that $f(n) + g(n) \in O(g(n))$. *Hint*: Use the definition of Big-O to give you more information about the relationship between $f$ and $g$!
 
 ### Activity Instructions
 
@@ -22,12 +27,13 @@ You will work towards being able to...
 
 2. *Formalize* the mechanics of your table's chosen sorting technique. Describe it as a combination of a few *basic* operations: comparisons, and swapping the positions of two numbers. Write out pseudocode to describe your sorting operation. 
 
-3. Starting from the array listed in step 1, count the number of basic operations it takes to sort the array using your sorting algorithm. 
+3. Construct a random ordering of cards and count the number of basic operations it takes to sort the array using your sorting algorithm. 
 
 4. Now, consider how far from a best or worst case scenario the array you were given was. Try and see if you can can determine the *worst-case* input (of length 5!) for your sorting algorithm. If you think you've found the worst possible case, share your reasoning and try and convince your table-mates that no input would take any longer. How many time steps does your algorithm take in the worst case? *Hint*: Since all sorting cares about the relative ordering of elements, you only need to consider different initial shuffles of the 5 elements.
 
-5. If you have spare time, try: 
-    - Do the above for a different intuitive sorting algorithm from someone else at the table. Are the worst-case arrays different for the two? 
-    - Can you come up with a way to construct a worst-case array for your algorithm for any n? See if you can generalize a worst-case growth function for the time complexity of this algorithm. 
-    - We've assumed that the only things you can do are compare and swap elements in the array. Would your algorithm be faster with access to a different data structure or basic operation?  
+5. Analyze the pseudocode for your algorithm and determine the growth function for your sort in terms of the number of comparisons and swaps. Determine it's time complexity in terms of Big-$\Theta$.
+
+6. If you have time, prove your growth function is, in fact, within that Big-$\Theta$ time complexity class.
+
+7. Submit an artifact (picture, screenshot, etc.) of you (1) pseudocode and (2) worst-case growth function and submit it on Moodle.
 
