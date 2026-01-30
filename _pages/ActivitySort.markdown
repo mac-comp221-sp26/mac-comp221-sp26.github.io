@@ -16,7 +16,7 @@ You will work towards being able to...
 ### Warm-Up
 Using our formal definition of Big-$O$...
 
-1. Show that $f(n) = \log n \in O(n)$. 
+1. Show that $f(n) = \log n \in O(n)$. *Note*: When the inequality is obvious is a matter of contentious, but interpreting logarithms is strange but interpreting exponents is easier. If there is something that looks provable via induction like in Fleck, you can stop for now!  
 
 2. Show that $g(n) = n + \log n \in O(n)$. *Hint*: Can the previous problem help you?
 
