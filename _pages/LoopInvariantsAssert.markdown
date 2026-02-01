@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "Loop Invariants as Assertions in Code"
+title: "Loop Invariants in Code"
 categories: Notebook Loop Invariant Assert code
 ---
-
-# Loop Invariants in Code
 
 When learning about loop invariants, it may be helpful to see how they can correspond to equivalent assertions in code. That's what this document aims to do, for Python (the closest thing to pseudocode one can get!). 
 
