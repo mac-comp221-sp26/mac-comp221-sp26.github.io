@@ -38,7 +38,7 @@ The schedule below will be updated to keep track of all released course material
 | - | WED 1/28 | Big-O(h) Analysis  | \*[Fleck 14.1, 14.5--14.8](https://mfleck.cs.illinois.edu/building-blocks/updates-fa2017/big-o.pdf), skim [Time Complexity Notes]({{site.url}}/notes/TimeComplexity.pdf) | |
 | - | FRI 1/30 | Big-O(h) Analysis Lab  | -  | [Activity: Sorting](pages/ActivitySort)  |
 | 2 | MON 2/02 | Proofs of Correctness (Iteration/Loop Invariants) | \*CLRS 2.1 (Moodle), Preview [Loop Invariants Notes]({{site.url}}/notes/CorrectnessAndLoopInvariants.pdf)  | [Loop Invariants and Assertions](pages/LoopInvariantsAssert) [Tao on rigor](https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/)  |
-| - | WED 2/04 | Proofs of Correctness (Recursion) | [Recursive Correctness Notes]({{site.url}}/notes/CorrectnessRecursion.pdf)  |  |
+| - | WED 2/04 | Proofs of Correctness (Recursion) | Skim [Recursive Correctness Notes]({{site.url}}/notes/CorrectnessRecursion.pdf)  |  |
 | - | FRI 2/06 | Proofs of Correctness Lab  | -  | [Activity: Sorting 2](pages/ActivityLoopInv) |
 | 3 | MON 2/09 | Revisiting Data Structures (Trees & Self-Balancing) | Preview [DS Notes]({{site.url}}/notes/DSReview.pdf) on AVL Trees  | |
 | - | WED 2/11 | Revisiting Data Structures (Array Stack & Amortization) | Preview [DS Notes]({site.url}}/notes/DSReview.pdf) on Amortization |   |
