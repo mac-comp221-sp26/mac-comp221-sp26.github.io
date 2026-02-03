@@ -91,3 +91,11 @@ The goal of this assignment is to review material from Data Structures and Discr
 **Due:** Mon. 2/02 9pm on Moodle
 
 [Instructions]({{site.url}}/hws/COMP221_HW0.pdf) | [Tex]({{site.url}}/hws/COMP221_HW0.tex)
+
+#### Homework 1
+This assignment evaluates your ability to prove Big-$O/\Omega/\Theta$ by definition with some degree of abstraction. I recommend working through examples with specific coefficients/etc. if you feel stuck.
+
+**Out:** Tue. 2/3
+**Due:** Mon. 2/9 9pm on Moodle
+
+[Instructions]({{site.url}}/hws/COMP221_HW1.pdf) | [Tex]({{site.url}}/hws/COMP221_HW1.tex)
