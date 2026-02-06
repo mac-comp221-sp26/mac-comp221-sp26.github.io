@@ -6,75 +6,97 @@
 \usepackage{algorithm}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{listings}
 \usepackage{mathtools}
-\usepackage{xcolor}
+\usepackage{hyperref}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
+\newtheoremstyle{prob}% name 
+{7pt}% Space above 
+{7pt}% 
+{}% 
+{0pt}%Indent amount 1 
+{\bfseries}% Theorem head font 
+{.}% 
+{\newline}% 
+{}%
 
+\theoremstyle{prob}
+\newtheorem*{probstate}{PROBLEM}
 
-%\printanswers
+\printanswers
 
 \title{Homework 4}
-\author{COMP221 Spring 2024 - Suhas Arehalli}
+\author{COMP221 Spring 2025 - Suhas Arehalli}
 \date{}
 
 \begin{document}
 
 \maketitle
 
-Complete the problems below. This assignment is out of \textbf{50} points, and the point values of each question are listed after the question's instructions. Note that point values are roughly inversely correlated with expected difficulty with secondary consideration for the amount of work and centrality of the material associated with them.
+Complete the problems below. Check the course website \& syllabus for further instructions.
 
-\begin{itemize}
-    \item Write up your solutions to all parts of this homework using some typesetting software (LaTeX/Overleaf is recommended, but any typeset PDF is acceptable).
-    \item You'll submit this assignment through Github Classroom (link on Moodle), with your written solutions in a pdf named ``[LASTNAME1]\_[LASTNAME2]\_Homework1.pdf''.
-    \item \textbf{The due date for this assignment will be posted on the course website.}
-    \item \textbf{You may submit assignments in pairs.} Put both peoples' names at the top of your submission. \begin{itemize}
-        \item \textbf{Both people are expected to have contributed to all parts of the assignment} -- work together, and make sure you and your partner are both convinced of your solutions.
-        \item If you discussed problems with other students, list their names at the top of your assignment (there will be no penalty for this --- it's encouraged!).
-        \item However, don't look at other group's written solutions/code, or share your written solutions/code with other groups. \textbf{In addition, do not search around the internet for solutions to these problems.} Seek help from your partner and course staff, the textbook, and course materials. Consult the syllabus for more details on academic integrity policies.
-    \end{itemize}  
-\end{itemize}   
+If any problem is unclear, or you think you found a typo, please let me know ASAP so I can clarify!
 
-Note that we may not have covered all of the topics involved in this assignment at the point of release. This is to give you time to complete the parts you can as early as you can. I recommend you make note of parts we haven't covered yet so you can come back to them.
+\section*{Problems}
 
-\section{Algorithmic Design \& Analysis \textit{(50pts)}} 
 \begin{questions}
-
-    \question \textbf{Degree Constrained Spanning Trees} \textit{18pts}
+    \question \textbf{Making Change} 
     
-    The low-degree spanning tree problem (\textproc{Low-Degree-Span}) is a decision problem that asks whether, for a graph $G = (V, E)$ and $k \in \mathbb{Z}_{\geq 0}$, whether there exists a spanning tree where each vertex in the tree has degree $\leq k$. 
-    \begin{parts}
-        \part (Skiena 11-12a) Provide (with pseudocode) a reduction showing that this problem is NP-hard. (\textit{10pts})
+    Suppose you are a cashier making change for a customer. Consider the following problem description for the problem of providing change with the fewest number of coins:
+    \begin{probstate}[Minimal Change Set]
+        \textbf{Input:} $k \in \mathbb{Z}$, a number of cents, and $C = \{c_1, \dots c_n\} \subseteq \mathbb{Z}_+$. 
+        
+        \textbf{Output:} A multi-set (set that allows duplicates) $L$ such that 
+        \begin{itemize}
+            \item $\forall c \in L, c \in C$
+            \item $\sum_{c \in L} c = k$
+            \item $\lvert L \rvert$ is minimized.
+        \end{itemize}
+        if such a set exists. $NULL$ otherwise.
+    \end{probstate}
+    That is, I need you to find the fewest possible coins such that the values of those coins add up to $k$. 
 
-        \textbf{**Hint**:} Consider the Hamiltonian Path Problem from the textbook.
+    You might have seen in Discrete Math that a greedy strategy --- adding the largest coin that doesn't go over $k$ --- works for US coin denominations (i.e., the case where $C = \{1, 5, 10, 25\}$. In fact, you can prove this correct using a clever, but tedious exchange argument.
+    \begin{parts}
         
-        \part (Skiena 11-12b) Consider the \textit{high-degree spanning tree problem} (\textproc{High-Degree-Span}) which asks, for graph $G = (V, E)$ and $k \in \mathbb{Z}_{\geq 0}$, if $G$ contains a spanning tree which contains a vertex with degree $\geq k$ (for clarification, count only edges within the spanning tree when computing degree here!). Provide pseudocode for a polynomial-time algorithm to solve this problem. (\textit{8pts})
-        
+        \part Prove via counterexample that the greedy strategy will not work for all sets of coin denominations $C$. That is, construct $C$ such that the greedy approach fails to find the minimal choice of coins.
+
+        \part Describe the solution to this problem in terms of a recurrence relation. For simplicity, write a solution that finds the \textbf{size} of the optimal set rather than constructing the set itself.
+
+        \textit{**HINT**:} Think carefully about how to frame the problem as a sequential decision process. It may be helpful to think about a way to avoid the mistake a greedy algorithm makes on your counterexample in the prior part, or to consider the subset sum problem.
+
+        \part Provide pseudocode for a dynamic programming algorithm that computes the \textbf{minimum number of coins} needed to make $k$ units of change that works for \textit{any} coin system. For full points, provide a solution that runs in $O(k\lvert C \rvert)$ time and $O(k)$ space. A solution with a worse space complexity can still get the majority of points.
+
     \end{parts}
-
-    \question \textbf{Approximate Vertex Cover} \textit{32pts}
+    \question \textbf{Degree-Constrained Spanning Trees} \textit{(Based on Skiena 11-12)}
     
-    Recall that the (minimum) vertex cover problem asks you to construct, given a graph $G= (V, E)$, $C \subseteq V$ such that every edges $e \in E$ is incident to a vertex in $C$. This transforms into a decision problem where, given that graph and an integer $k$, you must determine whether a vertex cover of size $\leq k$ exists on this graph. 
+
     \begin{parts}
-        \part Provide an algorithm to \textit{verify} a solution to vertex cover. That is, given some $C \subseteq V$ of size $k$ (called a \textit{certificate} for the vertex cover problem), find an \textit{efficient} algorithm to determine whether $C$ is a vertex cover of $G$. \textit{8pts}
+        \part The low-degree spanning tree problem (\textproc{Low-Degree-Span}) is a decision problem defined as follows:
+        \begin{probstate}[\textproc{Low-Degree-Span}]
+            \textbf{Input:} An undirected graph $G = (V, E)$ and $k \in \mathbb{Z}_{\geq 0}$
+        
+            \textbf{Output:} TRUE iff there exists a spanning tree where each vertex in the tree has degree $\leq k$. FALSE otherwise.
+        \end{probstate}
+        Prove (using a Karp reduction) that \textproc{Low-Degree-Span} is NP-hard. Make sure you provide both a description of the reduction and a brief justification of the correctness of the reduction as part of your answer.
 
-        \part Suppose $G$ is a tree. Provide a linear time algorithm ($\Theta(\lvert V \rvert + \lvert E \rvert)$) for constructing a minimum vertex cover. \textit{6pts}
+        \textbf{**Hint**:} Skim through the NP-hard problems we've seen so far and see which ones seem most similar. Then try and construct a reduction in the appropriate direction.
 
-        \part Prove that the algorithm in the previous part is correct. \textit{6pts}
+        
+        \part Consider the \textit{high-degree spanning tree problem} (\textproc{High-Degree-Span}) which is defined as follows:
+        \begin{probstate}[\textproc{High-Degree-Span}]
+            \textbf{Input:} An undirected graph $G = (V, E)$ and $k \in \mathbb{Z}_{\geq 0}$.
+            
+            \textbf{Output:} TRUE if $G$ contains a spanning tree which contains a vertex with degree $\geq k$ (within the spanning tree). FALSE otherwise.
+        \end{probstate} 
+        Show that \textproc{High-Degree Span} is in P by providing pseudocode for a polynomial-time algorithm to solve this problem. 
 
-        \part For every edge $e \in E$, by definition a vertex cover must contain at least one of the vertices incident to that edge. Write pseudocode for an algorithm that incrementally builds a vertex cover by repeatedly selecting edges that are not yet covered and then adding \textit{both} vertices along those edges to the vertex cover. (\textit{4pt})
-
-        \part Provide a big-$O$ time complexity for the algorithm in the previous part in terms of $\lvert V \rvert$. (\textit{4pt})
-
-        \part Prove that this is a \textit{2-Approximation} of the vertex cover problem. That is, suppose your algorithm constructs a set cover $C$, and let $C^*$ is the minimum set cover; Prove that $\lvert C \rvert \leq 2\lvert C^* \rvert$. (\textit{3pt})
-
-        \part Consider an alternative strategy where you repeatedly select the \textit{highest-degree vertex} remaining in the graph. That is, repeatedly add the highest-degree vertex $v$ to a vertex cover $C$ and then remove all edges incident to $v$ from $E$ until no edges remain in $E$. Prove, by counterexample, that this solution is \textit{not} a \textit{2-Approximation} (\textit{1pt})
-
-        \textbf{**Hint**:} Consider a bipartite graph with one of the two parts containing vertices with identical degree.
+        \textbf{**Hint**}: Consider methods we've seen before that have you construct spanning trees in a graph!
+        
     \end{parts}
 \end{questions}
-
 
 \end{document}

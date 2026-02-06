@@ -1,0 +1,545 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Activity: Sorting and Loop Invariants · COMP 221 - Overview &amp; Schedule</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Course Website for Macalester MSCS's COMP 221 offered Spring 2026."><meta name="generator" content="Jekyll (using style of GitBook)"><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/pseudocode.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/pages/ActivityHS/" />
+        
+
+        
+            <link rel="next" href="/pages/ActivityMT/" />
+        
+    </head>
+    <body>
+        <div class="book"><div class="book-summary">
+    <script type="text/javascript">
+        // Fixes the page links scroll problem on both desktop and mobile browsers
+        function pageScrollToTop(element) {
+            // both mobile and non-mobile
+            $('div.body-inner').animate({scrollTop: 0});
+            $(element).parent().find('li>ul>li').removeClass('active');
+            return true;  // propagate
+        }
+        // Fixes the anchor links scroll problem on mobile browsers
+        function mobilePageScrollToAnchor(element) {
+            $(element).closest('li.chapter').find('ul>li').removeClass('active');
+            $(element).parent().addClass('active');
+            if ($(document).width() <= 1240) {
+                let target = $($(element).attr('href'));
+                if (target.length) {
+                    $('div.body-inner').animate({
+                        scrollTop: target.get(0).offsetTop,
+                    });
+                }
+            }
+            return true;
+        }
+    </script>
+
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="">
+            
+                <a href="/" onclick="pageScrollToTop(this)">
+                    COMP 221 - Overview &amp; Schedule
+                </a>
+                
+                    
+                
+            </li>
+
+            <li class="divider"></li>
+
+            
+                
+                    <!-- <p>pages</p> -->
+                    
+                        
+
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/Activity08/">
+                            
+                                <a href="/pages/Activity08/" onclick="pageScrollToTop(this)">
+                                    Activity: Sorting as Pre-Processing
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivityBS/">
+                            
+                                <a href="/pages/ActivityBS/" onclick="pageScrollToTop(this)">
+                                    Activity: Binary Search Variants
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivityDP1/">
+                            
+                                <a href="/pages/ActivityDP1/" onclick="pageScrollToTop(this)">
+                                    Activity: Dynamic Programming Practice
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivityDP2/">
+                            
+                                <a href="/pages/ActivityDP2/" onclick="pageScrollToTop(this)">
+                                    Activity: Dynamic Programming Practice 2
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivityDS/">
+                            
+                                <a href="/pages/ActivityDS/" onclick="pageScrollToTop(this)">
+                                    Activity: Data Structure Review
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivityHS/">
+                            
+                                <a href="/pages/ActivityHS/" onclick="pageScrollToTop(this)">
+                                    Activity: Heap- &amp; TreeSort
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter active" data-level="1.2" data-path="/pages/ActivityLoopInv/">
+                            
+                                <a href="/pages/ActivityLoopInv/" onclick="pageScrollToTop(this)">
+                                    Activity: Sorting and Loop Invariants
+                                </a>
+                                
+                                    
+                                        <ul><li><a href="#learning-goals" onclick="mobilePageScrollToAnchor(this)" >Learning Goals</a><ul><li><a href="#warm-up" onclick="mobilePageScrollToAnchor(this)" >Warm-Up</a></li><li><a href="#activity-instructions" onclick="mobilePageScrollToAnchor(this)" >Activity Instructions</a></li></ul></li></ul>
+
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivityMT/">
+                            
+                                <a href="/pages/ActivityMT/" onclick="pageScrollToTop(this)">
+                                    Activity: The Master Theorem
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivityQS/">
+                            
+                                <a href="/pages/ActivityQS/" onclick="pageScrollToTop(this)">
+                                    Activity: Quicksort and Partitioning
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivitySort/">
+                            
+                                <a href="/pages/ActivitySort/" onclick="pageScrollToTop(this)">
+                                    Activity: Big-O Practice &amp; Sorting 1
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/GraphApplications/">
+                            
+                                <a href="/pages/GraphApplications/" onclick="pageScrollToTop(this)">
+                                    Graph Applications
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/pages/LoopInvariants/">
+                            
+                                <a href="/pages/LoopInvariants/" onclick="pageScrollToTop(this)">
+                                    Loop Invariants and Asserts in Code
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+
+                        
+                            <li class="divider"></li>
+                        
+                    
+                
+                    <!-- <p>posts</p> -->
+                    
+                        
+
+                        
+
+                        
+                    
+                
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Activity: Sorting and Loop Invariants</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/pages/ActivityLoopInv">Activity: Sorting and Loop Invariants</h1>
+                    
+
+                    <h2 id="learning-goals">Learning Goals</h2>
+
+<p>You will work towards being able to…</p>
+
+<ol>
+  <li>Prove the correctness of an iterative algorithm using a loop invariant</li>
+</ol>
+
+<h3 id="warm-up">Warm-Up</h3>
+<p>For each of the following iterative functions, write a loop invariant that you can use to prove it correct. If you have extra time, sketch out a proof.</p>
+
+<ol>
+  <li>We define the factorial of $n \in \mathbb{N}$ (i.e., $n!$) as $n! = \prod_{i=1}^n i$. Consider:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Factorial(n ∈ ℕ):
+        p ← 1
+        for i ← 1 to n:
+            p ← p * i
+        return p
+</code></pre></div></div>
+
+<ol>
+  <li>We define the <em>Fibonacci sequence</em> $f_0, f_1, \dots $ as follows: $f_0 = 0$, $f_1 = 1$, and for $n \geq 2$, $f_n = f_{n-1} + f_{n-2}$. A solution to the Fibonacci Number problem takes in $n \in \mathbb{N}$ and must return $f_n$ as defined. Consider the following:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Fibonacci(n ∈ ℕ):
+        f_prev ← 0
+        f ← 1
+        for i ← 2 to n:
+            f ← f + f_prev
+            f_prev ← f - f_prev
+        return f
+</code></pre></div></div>
+
+<h3 id="activity-instructions">Activity Instructions</h3>
+
+<ol>
+  <li>Consider the following BubbleSort algorithm. Read through the code, verify you understand the steps, and simulate the algorithm with the cards in front of you.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    BubbleSort(Array A[1...n]):
+        for i ← 1 to n
+            for j ← 1 to n-i:
+                if A[j+1] &lt; A[j]:
+                    swap(A[j], A[j+1])
+        return A
+    
+</code></pre></div></div>
+
+<ol>
+  <li>As your simulate the code, begin to think about what each loop in the code does. Then, as you perform each loop, keep in mind our core questions: <em>How does each iteration make progress toward our ultimate goal?</em>. Make sure your group has a solid ointuition for this before moving on.
+    <ul>
+      <li>It may be helpful to grab a marker and keep track of the state of the array after each iteration. Look for patterns that you might be able to describe as invariants!</li>
+    </ul>
+  </li>
+  <li>Split the code into two functions (like Insert and InsertionSort) that isolate each loop. Call the new function that represents the inner loop Bubble, to fit the theme. Write a problem definition for the problem each function solves using your idea of what each loop is supposed to do.
+    <ul>
+      <li>This should be simple for the outer loop, since the algorithm needs to sort! The inner loop will be more interesting.</li>
+    </ul>
+  </li>
+  <li>Identify a loop invariant for the loop in each function. Sketch out a proof (i.e., don’t worry about phrasing for now, just the ideas!) for each invariant, starting with the Bubble function and using that result to prove the outer Loop Invariant.
+    <ul>
+      <li>Don’t be worried if you feel like you don’t have enough to show your loop invariant holds! Think about what additional information might be missing and how you might strengthen your loop invariant to give you a stronger inductive hypothesis!</li>
+    </ul>
+  </li>
+</ol>
+
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+
+                        <a href="/pages/ActivityHS/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Activity: Heap- & TreeSort">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/pages/ActivityMT/" class="navigation navigation-next navigation-unique" aria-label="Next page: Activity: The Master Theorem">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Activity: The Master Theorem",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/ActivityMT.markdown",
+            "ref": "_pages/ActivityMT.markdown",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": false,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com/mac-comp221-sp26",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": false,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "COMP 221 - Overview & Schedule",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/ActivityLoopInv.markdown",
+        "mtime": "2026-02-05 15:57:33 -0600",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "",
+        "time": "2026-02-05 15:57:33 -0600"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/assets/gitbook/custom.js"></script>
+<script src="/assets/gitbook/custom-local.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+\documentclass{exam}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{geometry}[border=1in]
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{mathtools}
+
+\title{HW0: Review}
+\author{COMP 221 --- Suhas Arehalli}
+\date{Spring 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instructions}
+This assignment's goal is to help you recall a handful of concepts from the course's prerequisites that will be critical throughout the semester. While many of these concepts will come up as we cover background in the first week, some may require you to consult your notes from prior courses. 
+
+Keep in mind the following when completing the assignment:
+\begin{enumerate}
+    \item Submissions will be accepted as typeset pdfs through Moodle. I strongly recommend using LaTeX (perhaps through a tool like Overleaf), which is what I use to write these instructions.
+    \item Keep in mind that this work is to be done individually --- do not share or look at other students work directly. However, consulting your classmates, a preceptor, or an instructor for guidance (an idea or approach one might try) is perfectly acceptable, but \textbf{you must indicate in your submission the names of all people who have helped you.} Give credit where credit is due!
+    \item \textbf{Proofread your work before submission}. Like all writing, it's easy to make mistakes while you're putting together a first draft --- you're doing a lot in that first pass! Luckily, you can take a second pass to revise, dedicated to making sure your writing is clear and your argument is free of holes. 
+\end{enumerate}
+
+\section*{Questions}
+\begin{questions}
+    \question \textit{(Discrete Math)} Recall that an integer $n$ is odd iff there exists an integer $k$ such that $n = 2k + 1$ and is even iff there exists an integer $k$ such that $n = 2k$. Prove that $n(n+1)$ must be even. 
+    
+    \question \textit{(Discrete Math)} Prove (by induction) that 
+    \begin{align*}
+        \sum_{i = 1}^n i = \frac{1}{2}n(n+1).
+    \end{align*}
+
+    \question \textit{(Data Structures)} Determine the growth function for the algorithm \ref{alg:sample} in terms of $n$. For simplicity, you need only have the growth function count the number of times $x$ is incremented. 
+
+        \begin{algorithm}
+        \caption{Mysterious Algorithm}
+        \label{alg:sample}
+        \begin{algorithmic}
+            \State $x \gets 0$
+            \For{$i \gets 1$ to $n$}
+                \For{$j \gets 1$ to $i$}
+                    \State $x \gets x + 1$
+                \EndFor
+            \EndFor
+            \State \Return x
+        \end{algorithmic}
+    \end{algorithm}
+
+    \question \textit{(Data Structures)} Provide the worst-case time complexity for algorithm \ref{alg:sample} in Big-$O$ notation. This should be \textit{best possible} (i.e., slowest growing) Big-$O$ that you can provide.\footnote{i.e., don't just write $O(n!)$ and call it a day.}
+
+    \question \textit{(Data Structures)} Consider the following pseudocode for a purported sorting algorithm.
+    Does this algorithm work? Why? What is it's worst-case time complexity, assuming we use a type of self-balancing BST you saw in Data Structures?
+
+    \begin{algorithm}
+        \caption{Sort Pseudocode A}
+        \label{alg:bsort}
+        \begin{algorithmic}
+        \Function{Sort}{Array $A$}
+            \State Insert all $x \in A$ to a self-balancing BST $T$
+            \State \Return an in-order traversal of $T$
+        \EndFunction
+        \end{algorithmic}
+    \end{algorithm}
+
+    \question \textit{(Discrete Math/Data Structures)} Consider a Graph $G = (V, E)$ with no self-edges. Recall that the degree of a vertex $v \in V$, notated $d(v)$, is the number of edges that are incident to/connect to $v$. Prove that $\sum_{v \in V} d(v)$ is even. Further, prove that the sum of the degrees of all odd-degree vertices, $\sum_{v \in V, d(v) odd} d(v)$, is even.
+
+    \textit{HINT: Do this via induction on the number of \textit{edges}.}
+\end{questions}
+
+\end{document}
