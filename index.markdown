@@ -40,8 +40,8 @@ The schedule below will be updated to keep track of all released course material
 | 2 | MON 2/02 | Proofs of Correctness (Iteration/Loop Invariants) | \*CLRS 2.1 (Moodle), Preview [Loop Invariants Notes]({{site.url}}/notes/CorrectnessAndLoopInvariants.pdf)  | [Loop Invariants and Assertions](pages/LoopInvariants) [Tao on rigor](https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/)  |
 | - | WED 2/04 | Proofs of Correctness (Recursion) | Skim [Recursive Correctness Notes]({{site.url}}/notes/CorrectnessRecursion.pdf)  |  |
 | - | FRI 2/06 | Proofs of Correctness Lab  | -  | [Activity: Sorting 2](pages/ActivityLoopInv) |
-| 3 | MON 2/09 | Revisiting Data Structures (Trees & Self-Balancing) | Preview [DS Notes]({{site.url}}/notes/DSReview.pdf) on AVL Trees  | |
-| - | WED 2/11 | Revisiting Data Structures (Array Stack & Amortization) | Preview [DS Notes]({site.url}}/notes/DSReview.pdf) on Amortization |   |
+| 3 | MON 2/09 | Revisiting Data Structures (Trees & Self-Balancing) | Preview [DS Notes]({{site.url}}/notes/DataStructures.pdf) on AVL Trees  | |
+| - | WED 2/11 | Revisiting Data Structures (Array Stack & Amortization) | Preview [DS Notes]({site.url}}/notes/DataStructures.pdf) on Amortization |   |
 | - | FRI 2/13 | Sorting: (Heap-/Tree- Sorts) |   | [Activity: DS Sort Activity](pages/ActivityHS)
 | 4 | MON 2/16 | Sorting: MergeSort | \*Erickson 1.4, Preview [MergeSort Notes]({{site.url}}/notes/MergeSort.pdf) |  |
 | - | WED 2/18 | Sorting: QuickSort | \*Erickson 1.5, Preview [QuickSort Notes]({{site.url}}/notes/QuickSort.pdf) | [Optional Activity: Partition and Quicksort](pages/ActivityQS) |
