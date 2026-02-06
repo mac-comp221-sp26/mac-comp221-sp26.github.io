@@ -238,16 +238,17 @@ assert isSorted(A,0, 4), "This error message should appear"
 ```
 
 
-    ---------------------------------------------------------------------------
+```console
+---------------------------------------------------------------------------
 
-    AssertionError                            Traceback (most recent call last)
+AssertionError                            Traceback (most recent call last)
 
-    Cell In[48], line 2
-          1 A = np.array([5,4,3,2,1])
-    ----> 2 assert isSorted(A,0, 4), "This error message should appear"
+Cell In[48], line 2
+      1 A = np.array([5,4,3,2,1])
+----> 2 assert isSorted(A,0, 4), "This error message should appear"
 
 
-    AssertionError: This error message should appear
-
+AssertionError: This error message should appear
+```
 
 And it does! The error message appears!

@@ -468,17 +468,17 @@ After:		 [1 2 3 4 5]
 <span class="k">assert</span> <span class="nf">isSorted</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="sh">"</span><span class="s">This error message should appear</span><span class="sh">"</span>
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">---------------------------------------------------------------------------
 
 AssertionError                            Traceback (most recent call last)
 
 Cell In[48], line 2
       1 A = np.array([5,4,3,2,1])
-----&gt; 2 assert isSorted(A,0, 4), "This error message should appear"
-
+</span><span class="gp">----&gt;</span><span class="w"> </span>2 assert isSorted<span class="o">(</span>A,0, 4<span class="o">)</span>, <span class="s2">"This error message should appear"</span>
+<span class="go">
 
 AssertionError: This error message should appear
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>And it does! The error message appears!</p>
 </section>
@@ -644,12 +644,12 @@ window.MathJax = {
     },
     "file": {
         "path": "_pages/LoopInvariants.md",
-        "mtime": "2026-02-05 15:57:33 -0600",
+        "mtime": "2026-02-05 19:07:56 -0600",
         "type": "markdown"
     },
     "gitbook": {
         "version": "",
-        "time": "2026-02-05 15:57:33 -0600"
+        "time": "2026-02-05 19:07:56 -0600"
     },
     "basePath": "",
     "book": {
