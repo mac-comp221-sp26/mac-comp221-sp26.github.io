@@ -99,3 +99,11 @@ This assignment evaluates your ability to prove Big-$O/\Omega/\Theta$ by definit
 **Due:** Mon. 2/9 9pm on Moodle
 
 [Instructions]({{site.url}}/hws/COMP221_HW1.pdf) | [Tex]({{site.url}}/hws/COMP221_HW1.tex)
+
+#### Homework 2
+This assignment evaluates your ability to prove the correctness of iterative and recursive algorithms. Spend time working through the algorithm on various examples before trying to start writing a proof!
+
+**Out:** Tue. 2/10
+**Due:** Mon. 2/16 9pm on Moodle
+
+[Instructions]({{site.url}}/hws/COMP221_HW2.pdf) | [Tex]({{site.url}}/hws/COMP221_HW2.tex)

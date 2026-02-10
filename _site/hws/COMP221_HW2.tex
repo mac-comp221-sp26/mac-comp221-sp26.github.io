@@ -6,16 +6,29 @@
 \usepackage{algorithm}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{listings}
 \usepackage{mathtools}
 \usepackage{hyperref}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
+\newtheoremstyle{prob}% name 
+{7pt}% Space above 
+{7pt}% 
+{}% 
+{0pt}%Indent amount 1 
+{\bfseries}% Theorem head font 
+{.}% 
+{\newline}% 
+{}%
+\theoremstyle{prob}
+\newtheorem*{probstate}{Problem Statement}
+
 \printanswers
 
 \title{Homework 2}
-\author{COMP221 Spring 2025 - Suhas Arehalli}
+\author{COMP221 Spring 2026 - Suhas Arehalli}
 \date{}
 
 \begin{document}
@@ -35,17 +48,16 @@ If any problem is unclear, or you think you found a typo, please let me know ASA
         \caption{Selection Sort and the Select helper function.}
         \label{alg:ssort}
         \begin{algorithmic}
-        \Function{SelectionSort}{Array $A$}
-            \State Let $N$ be the length of $A$
-            \For{$i \gets 1$ to $N-1$}
+        \Function{SelectionSort}{Array $A[1\dots n]$}
+            \For{$i \gets 1$ to $n-1$}
                 \State $idx \gets $\Call{Select}{$A$, $i$}
                 \State \textsc{Swap}($A[idx]$, $A[i]$)
             \EndFor
+            \State \Return A
         \EndFunction
-        \Function{Select}{Array $A$, Integer $i$}
-            \State Let $N$ be the length of $A$
+        \Function{Select}{Array $A[1\dots n]$, Integer $i$}
             \State $idx \gets i$
-            \For{$j \gets i+1$ to $N$}
+            \For{$j \gets i+1$ to $n$}
                 \If{$A[idx] > A[j]$}
                     \State $idx \gets j$
                 \EndIf
@@ -55,18 +67,16 @@ If any problem is unclear, or you think you found a typo, please let me know ASA
         \end{algorithmic}
     \end{algorithm}
 
+
     Prove its correctness in the following steps:
     \begin{parts}
-        \part \textit{(0pts)} Run \textsc{SelectionSort} on an example array. Before moving on, ensure you (1) are convinced the algorithm works, (2) understand what the Select function does, and (3) intuitively understand what each iteration of each loop is doing and how it gets us toward a sorted array.
+        \part \textit{(0pts)} Run \textsc{SelectionSort} on an example array (or arrays!). Before moving on, ensure you (1) are convinced the algorithm works, (2) understand what the Select function does, and (3) intuitively understand what each iteration of each loop is doing and how it gets us toward a sorted array.
 
         \part \textit{(2pts)} Provide a loop invariant that will help us prove the correctness of \textsc{SelectionSort}. \label{prob:SelectSortInvar} 
 
         \part \textit{(2pts)} Provide a loop invariant that will help us prove the correctness of \textsc{Select} (and therefore help us prove the correctness of \textsc{SelectionSort}). \label{prob:SelectInvar}
 
         \part \textit{(5pts)} Prove the loop invariant you provided in part \ref{prob:SelectInvar} is correct using induction. Conclude that $\textsc{Select}$ is correct, for some definition of correct.
-
-        \textit{HINT: Consider the inputs of \textsc{Select}. What must be true of the return value given $A$ and $i$?}
-
 
         \part \textit{(5pts)} Prove the loop invariant you provided in part \ref{prob:SelectSortInvar} is correct using induction. Use the correctness of \textsc{Select} from problem \ref{prob:SelectInvar} to help you.
 
@@ -77,7 +87,18 @@ If any problem is unclear, or you think you found a typo, please let me know ASA
 
     \question \textbf{Recursive Linear Search} (\textit{15pts})
     \begin{parts}
-        \part Write pseudocode for a recursive linear search algorithm called \textproc{RecursiveLinearSearch}. This algorithm should take in an array $A$ and some element $e$ and return either an index $i$ or $NULL$. If it returns an index $i$, the algorithm is correct if $A[i] == e$. If it returns $NULL$, $e \notin A$. (\textit{5pts}) \label{prob:RLSdesign}
+        \part Write pseudocode for a \textbf{recursive} linear search algorithm called \textproc{RecursiveLinearSearch}. This algorithm should solve the \textsc{ArraySearch} problem we saw in class, as defined below, and do so using recursion:
+
+        \begin{probstate}[ArraySearch]
+            \textbf{Input:} Array $A[1\dots n]$, Element $e$ \\
+            \textbf{Output:} $r$ with
+            \begin{align*}     
+            r = \begin{cases}
+                i \in \{1,\dots, n\} \text{ such that } A[i] = e, &e \in A \\
+                NULL, &e \notin A
+            \end{cases}
+            \end{align*}
+        \end{probstate}(\textit{5pts}) \label{prob:RLSdesign}
 
 
         \part Prove the correctness of this algorithm, using the definition of correctness for search we discussed in class (and is summarized in part \ref{prob:RLSdesign}). (\textit{10pts})
