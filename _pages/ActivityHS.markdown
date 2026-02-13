@@ -40,11 +40,11 @@ Select(Array A[1...m]):
 Make sure you understand what this code is doing!
 
 3. The goal of **Data Structure-based Design** is to identify code that navigates data (i.e., a collection) inefficiently and modifying the code to replace these inefficiencies with code that uses a better data structure that is faster and still correct. 
-    a. What is the Big-O worst-case time complexity of select?
-    b. We define correctness for select as returning the index of the smallest element in the subarray passed as an argument. Recall from data structures that we spend some time designing a data structure that made repeatedly finding the smallest element in a collection fast and efficient! 
-    c. Spend a moment reminding yourself and your partner of this data structure (a priority queue, implemented via a min-heap!). What are the time complexities of the `add` and `removeMin` operations in a min-heap/pqueue?
-    d. Rewrite `SelectionSort` so that it utilizes a priority queue rather than the `Select` function.
-    e. Analyze the time complexity of the resulting `HeapSort` function.  You may use the fact that $\sum_{i=1}^{n} \log i \in \Theta(n\log n)$ (a consequence of Stirling's approximation, if you're interested). 
+    1. What is the Big-O worst-case time complexity of select?
+    2. We define correctness for select as returning the index of the smallest element in the subarray passed as an argument. Recall from data structures that we spend some time designing a data structure that made repeatedly finding the smallest element in a collection fast and efficient! 
+    3. Spend a moment reminding yourself and your partner of this data structure (a priority queue, implemented via a min-heap!). What are the time complexities of the `add` and `removeMin` operations in a min-heap/pqueue?
+    4. Rewrite `SelectionSort` so that it utilizes a priority queue rather than the `Select` function.
+    5. Analyze the time complexity of the resulting `HeapSort` function.  You may use the fact that $\sum_{i=1}^{n} \log i \in \Theta(n\log n)$ (a consequence of Stirling's approximation, if you're interested). 
 
 4. **Bonus:** Just as you prove the correctness of `SelectionSort` using an intermediate results/lemma about `Select` being correct, we prove the correctness of heapsort using established results about the correctness of our heap operations! For example, we can modify our proof of correctness for `SelectionSort` to be one for `HeapSort` by using a few facts about heaps we can prove. Namely, we can say state results like
 

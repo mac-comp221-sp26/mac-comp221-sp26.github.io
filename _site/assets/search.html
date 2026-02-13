@@ -1,7 +1,9 @@
+<!-- Slightly Modified from _layouts/home.html -->
+
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Activity: Heap- &amp; TreeSort · COMP 221 - Overview &amp; Schedule</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>COMP 221 - Overview &amp; Schedule</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Course Website for Macalester MSCS's COMP 221 offered Spring 2026."><meta name="generator" content="Jekyll (using style of GitBook)"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
@@ -24,11 +26,9 @@
 
 
 
-            <link rel="prev" href="/pages/ActivityDS/" />
-        
 
         
-            <link rel="next" href="/pages/ActivityLoopInv/" />
+            <link rel="next" href="" />
         
     </head>
     <body>
@@ -141,15 +141,12 @@
                             </li>
                         
                             
-                            <li class="chapter active" data-level="1.2" data-path="/pages/ActivityHS/">
+                            <li class="chapter" data-level="1.1" data-path="/pages/ActivityHS/">
                             
                                 <a href="/pages/ActivityHS/" onclick="pageScrollToTop(this)">
                                     Activity: Heap- &amp; TreeSort
                                 </a>
                                 
-                                    
-                                        <ul><li><a href="#learning-goals" onclick="mobilePageScrollToAnchor(this)" >Learning Goals</a><ul><li><a href="#part-1-heapsort" onclick="mobilePageScrollToAnchor(this)" >Part 1: HeapSort</a></li></ul></li></ul>
-
                                     
                                 
                             </li>
@@ -245,108 +242,33 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Activity: Heap- &amp; TreeSort</a>
+                            <a href="." >COMP 221 - Overview &amp; Schedule</a>
                         
                     </h1>
                 </div>
 
-                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
-    
+                <div class="body-inner">
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <section class="normal markdown-section">
+                                
+                                    <h1 id="">COMP 221 - Overview &amp; Schedule</h1>
+                                
 
-    <div class="page-inner">
-        <div id="book-search-results">
-            <div class="search-noresults">
-                <section class="normal markdown-section">
-                    
-                        <h1 id="/pages/ActivityHS">Activity: Heap- &amp; TreeSort</h1>
-                    
+                                <br />
+                            </section>
 
-                    <h2 id="learning-goals">Learning Goals</h2>
+                            <!-- Slightly Modified from _layouts/home.html -->
 
-<p>You will work towards being able to…</p>
+<div id="book-search-input-inside" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
 
-<ol>
-  <li>
-    <p>Build and reason about algorithms that use data structure-based design principles</p>
-  </li>
-  <li>
-    <p>Understanding the core idea of, write pseudocode for, and analyze the runtime and correctness of common algorithms (HeapSort and TreeSort)</p>
-  </li>
-  <li>
-    <p>Understand sorting as a pre-processing step for solving common algorithmic problems.</p>
-  </li>
-</ol>
 
-<h3 id="part-1-heapsort">Part 1: HeapSort</h3>
-
-<ol>
-  <li>Consider the following pseudocode for SelectionSort. Make sure you understand how it works (HW2 should help!).</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SelectionSort(Array A[1...n]):
-    for i ← 1 to n-1:
-        idx ← (i-1) + Select(A[i...n]) // Gets the index of the smallest element in the subarray
-        Swap(A[idx], A[i])
-    return A
-</code></pre></div></div>
-
-<ol>
-  <li>Note that the implementation of Select you saw in the homework operates by performing a linear scan of the subarray, as follows:</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Select(Array A[1...m]):
-    min_idx ← 1
-    for i ← 2 to m:
-        if A[i] &lt; A[min_idx]:
-            min_idx ← i
-    return i
-</code></pre></div></div>
-
-<p>Make sure you understand what this code is doing!</p>
-
-<ol>
-  <li>The goal of <strong>Data Structure-based Design</strong> is to identify code that navigates data (i.e., a collection) inefficiently and modifying the code to replace these inefficiencies with code that uses a better data structure that is faster and still correct.
-    <ol>
-      <li>What is the Big-O worst-case time complexity of select?</li>
-      <li>We define correctness for select as returning the index of the smallest element in the subarray passed as an argument. Recall from data structures that we spend some time designing a data structure that made repeatedly finding the smallest element in a collection fast and efficient!</li>
-      <li>Spend a moment reminding yourself and your partner of this data structure (a priority queue, implemented via a min-heap!). What are the time complexities of the <code class="language-plaintext highlighter-rouge">add</code> and <code class="language-plaintext highlighter-rouge">removeMin</code> operations in a min-heap/pqueue?</li>
-      <li>Rewrite <code class="language-plaintext highlighter-rouge">SelectionSort</code> so that it utilizes a priority queue rather than the <code class="language-plaintext highlighter-rouge">Select</code> function.</li>
-      <li>Analyze the time complexity of the resulting <code class="language-plaintext highlighter-rouge">HeapSort</code> function.  You may use the fact that $\sum_{i=1}^{n} \log i \in \Theta(n\log n)$ (a consequence of Stirling’s approximation, if you’re interested).</li>
-    </ol>
-  </li>
-  <li><strong>Bonus:</strong> Just as you prove the correctness of <code class="language-plaintext highlighter-rouge">SelectionSort</code> using an intermediate results/lemma about <code class="language-plaintext highlighter-rouge">Select</code> being correct, we prove the correctness of heapsort using established results about the correctness of our heap operations! For example, we can modify our proof of correctness for <code class="language-plaintext highlighter-rouge">SelectionSort</code> to be one for <code class="language-plaintext highlighter-rouge">HeapSort</code> by using a few facts about heaps we can prove. Namely, we can say state results like</li>
-</ol>
-
-<blockquote>
-  <p>(Lemma 1) For a min-heap $h$, <code class="language-plaintext highlighter-rouge">removeMin()</code> updates $h$ to $h’$ returns an element $e$ such that $e \leq f$ for all $f \in h’$, $e \notin h’$, and for all $f \in h$ where $e \neq f$, $f \in h$.</p>
-</blockquote>
-
-<p>which simply rephrases that removeMin returns the smallest element of the heap and removes it (and only it) from the heap. 
-    a. Think about how you might adapt your proof of correctness from HW2 to prove <code class="language-plaintext highlighter-rouge">HeapSort</code> correct.
-    b. Now consider the <em>implementation</em> side of the proof. Consider how we might write a proof for the above lemma using our implementation of a heap from 128!</p>
-
-<h4 id="part-2-treesort">Part 2: TreeSort</h4>
-<ol>
-  <li>
-    <p>Write out pseudocode for TreeSort, which works by inserting each element of our array into a Binary Search Tree and filling in a new array by reading out the search tree’s in-order traversal. This should notably be more specified than the problem in HW0!</p>
-  </li>
-  <li>
-    <p>Work backwards from TreeSort and compare it’s behavior the the $O(n^2)$ sorts we’ve seen before. Discuss with your partner how TreeSort can be analyzed as a Data Structure-based optimization of a sort we’ve seen before.</p>
-  </li>
-  <li>
-    <p>Recall what we’ve seen from discussing Self-Balancing BSTs and provide a Big-O time complexity for <code class="language-plaintext highlighter-rouge">Insert</code> into a SBBST. We will have to wait briefly for a formal analysis of an in-order traversal, but you may assume what we said in Data Structures — that it is $O(n)$. What is the time complexity of <code class="language-plaintext highlighter-rouge">TreeSort</code>?</p>
-  </li>
-  <li>
-    <p><strong>Bonus:</strong> Lets begin analyze TreeSort’s correctness (and runtime, if we didn’t discuss this in lecture!). You’ll find (similar to HeapSort) that the correctness of this algorithm relies on a property of a binary search tree: That it’s in-order traversal is sorted! Use the following definitions:</p>
-  </li>
-</ol>
-
-<p>A sequence $a_1, \dots a_n$ is <em>sorted</em> iff $a_1 \leq a_2 \leq \dots \leq a_n$. A sequence $a_1, \dots, a_n$ is an <em>in-order traversal</em> of a binary tree $T$ iff each $a_i$, $1 \leq i \leq n$ uniquely maps to the value of a node in $T$  and for any $a_i$ and it’s corresponding node $N$, the value of each node in the left subtree of $N$, $a_j$  has index $j &lt; i$ and every element in it’s right subtree of $N$, $a_k$, has index $k &gt; i$. A <em>binary search tree</em> is a tree $T$ such that for every node $N$ with value $m$ in the tree, every value $l$ in the left subtree of $N$ has $l \leq m$ and for every value $r$ in the right subtree of $N$ has $r \geq m$.</p>
-
-<h4 id="submission">Submission</h4>
-<p>Submit an artifact of your work from the HeapSort portion of this assignment, as well as your TreeSort pseudocode if you’ve gotten there!</p>
-</section>
-            </div><div class="search-results">
+                            <div id="book-search-results">
+                                <div class="search-noresults">
+                                    
+                                </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
@@ -355,62 +277,8 @@
         <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div></div>
-    </div>
-</div>
-
-<!-- introduce mathjax support -->
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-</script>
-<script
-  type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-
-
-<!-- introduce per-page mermaid support -->
-
-
-<!-- introduce mathjax support -->
-<script>
-    function fixes_chrome_anchors() {
-        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-        if (window.location.hash && chrome) {
-            setTimeout(function () {
-                var hash = window.location.hash;
-                window.location.hash = "";
-                window.location.hash = hash;
-            }, 300);
-        }
-    }
-
-    if (document.readyState === "loading") {
-        // Loading hasn't finished yet
-        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
-    } else {
-        // `DOMContentLoaded` has already fired
-        fixes_chrome_anchors();
-    }
-</script>
-
-
-                        <a href="/pages/ActivityDS/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Activity: Data Structure Review">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                    
-
-                    
-                        <a href="/pages/ActivityLoopInv/" class="navigation navigation-next navigation-unique" aria-label="Next page: Activity: Sorting and Loop Invariants">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -423,12 +291,14 @@ window.MathJax = {
         "level": "1.1",
         "depth": 1,
         
+
+        
         "next": {
-            "title": "Activity: Sorting and Loop Invariants",
+            "title": "",
             "level": "1.2",
             "depth": 1,
-            "path": "_pages/ActivityLoopInv.markdown",
-            "ref": "_pages/ActivityLoopInv.markdown",
+            "path": "",
+            "ref": "",
             "articles": []
         },
         
@@ -520,8 +390,8 @@ window.MathJax = {
         "gitbook": "*"
     },
     "file": {
-        "path": "_pages/ActivityHS.markdown",
-        "mtime": "2026-02-13 14:30:54 -0600",
+        "path": "assets/search.html",
+        "mtime": "",
         "type": "markdown"
     },
     "gitbook": {
