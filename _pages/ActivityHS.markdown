@@ -34,7 +34,7 @@ Select(Array A[1...m]):
     for i ← 2 to m:
         if A[i] < A[min_idx]:
             min_idx ← i
-    return i
+    return min_idx
 ```
 
 Make sure you understand what this code is doing!
