@@ -59,7 +59,7 @@ which simply rephrases that removeMin returns the smallest element of the heap a
 
 3. Recall what we've seen from discussing Self-Balancing BSTs and provide a Big-O time complexity for `Insert` into a SBBST. We will have to wait briefly for a formal analysis of an in-order traversal, but you may assume what we said in Data Structures --- that it is $O(n)$. What is the time complexity of `TreeSort`?
 
-4. **Bonus:** Lets begin analyze TreeSort's correctness (and runtime, if we didn't discuss this in lecture!). You'll find (similar to HeapSort) that the correctness of this algorithm relies on a property of a binary search tree: That it's in-order traversal is sorted! Use the following definitions:
+4. **Bonus:** Lets begin analyzing TreeSort's correctness. You'll find (similar to HeapSort) that the correctness of this algorithm relies on a property of a binary search tree: That it's in-order traversal is sorted! Use the following definitions:
 
 A sequence $a_1, \dots a_n$ is *sorted* iff $a_1 \leq a_2 \leq \dots \leq a_n$. A sequence $a_1, \dots, a_n$ is an *in-order traversal* of a binary tree $T$ iff each $a_i$, $1 \leq i \leq n$ uniquely maps to the value of a node in $T$  and for any $a_i$ and it's corresponding node $N$, the value of each node in the left subtree of $N$, $a_j$  has index $j < i$ and every element in it's right subtree of $N$, $a_k$, has index $k > i$. A *binary search tree* is a tree $T$ such that for every node $N$ with value $m$ in the tree, every value $l$ in the left subtree of $N$ has $l \leq m$ and for every value $r$ in the right subtree of $N$ has $r \geq m$.
 
