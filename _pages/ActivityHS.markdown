@@ -51,8 +51,8 @@ Make sure you understand what this code is doing!
 > (Lemma 1) For a min-heap $h$, `removeMin()` updates $h$ to $h'$ returns an element $e$ such that $e \leq f$ for all $f \in h'$, $e \notin h'$, and for all $f \in h$ where $e \neq f$, $f \in h$.  
 
 which simply rephrases that removeMin returns the smallest element of the heap and removes it (and only it) from the heap. 
-    a. Think about how you might adapt your proof of correctness from HW2 to prove `HeapSort` correct.
-    b. Now consider the *implementation* side of the proof. Consider how we might write a proof for the above lemma using our implementation of a heap from 128!
+    1. Think about how you might adapt your proof of correctness from HW2 to prove `HeapSort` correct.
+    2. Now consider the *implementation* side of the proof. Consider how we might write a proof for the above lemma using our implementation of a heap from 128!
 
 #### Part 2: TreeSort
 1. Write out pseudocode for TreeSort, which works by inserting each element of our array into a Binary Search Tree and filling in a new array by reading out the search tree's in-order traversal. This should notably be more specified than the problem in HW0!
