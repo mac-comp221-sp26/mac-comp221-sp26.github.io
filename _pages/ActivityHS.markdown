@@ -46,7 +46,7 @@ Make sure you understand what this code is doing!
     4. Rewrite `SelectionSort` so that it utilizes a priority queue rather than the `Select` function.
     5. Analyze the time complexity of the resulting `HeapSort` function.  You may use the fact that $\sum_{i=1}^{n} \log i \in \Theta(n\log n)$ (a consequence of Stirling's approximation, if you're interested). 
 
-4. **Bonus:** Just as you prove the correctness of `SelectionSort` using an intermediate results/lemma about `Select` being correct, we prove the correctness of heapsort using established results about the correctness of our heap operations! For example, we can modify our proof of correctness for `SelectionSort` to be one for `HeapSort` by using a few facts about heaps we can prove. Namely, we can say state results like
+4. **Bonus:** Just as you prove the correctness of `SelectionSort` using an intermediate results/lemma about `Select` being correct, we prove the correctness of heapsort using established results about the correctness of our heap operations! For example, we can modify our proof of correctness for `SelectionSort` to be one for `HeapSort` by using a few facts about heaps we can prove. Namely, we can state results like
 
 > (Lemma 1) For a min-heap $h$, `removeMin()` updates $h$ to $h'$ returns an element $e$ such that $e \leq f$ for all $f \in h'$, $e \notin h'$, and for all $f \in h$ where $e \neq f$, $f \in h$.  
 
