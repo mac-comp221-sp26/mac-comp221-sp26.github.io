@@ -57,14 +57,14 @@ The schedule below will be updated to keep track of all released course material
 | - | FRI 3/13 | MSTs: Kruskal's & Union-Find | Erickson 7.5, Preview [MST Notes]({{site.url}}/notes/MSTs.pdf) on Kruskal's | |
 | 8 | - | **SPRING BREAK** | | |
 | 9 | MON 3/23 | APSP: Floyd-Warshall | Erickson 9.1--9.2, 9.8 | |
-| - | WED 3/25 | Max-Flow = Min-Cut | \*Erickson 10.1 -- 10.3 | [Ford-Fulkerson Notes]({{site.url}}/notes/NetworkFlow.pdf) |
-| - | FRI 3/27 | Ford-Fulkerson | 10.4 -- 10.6 | |
-| 10 | MON 3/30 | Flex Day | | [Graph Application Activity](pages/GraphApplications) |
+| - | WED 3/25 | No Class (Supplement TBD) | Erickson 10.1 -- 10.3 | [Ford-Fulkerson Notes]({{site.url}}/notes/NetworkFlow.pdf) |
+| - | FRI 3/27 | No Class |  | |
+| 10 | MON 3/30 | Ford-Fulkerson | 10.4 -- 10.6 | |
 | - | WED 4/01 | **Exam 2** | | |
 | - | FRI 4/03 |  Backtracking & Combinatorial Search | Erickson 2.1--2.4 | |
 | 11 | MON 4/06 | Dynamic Programming | Erickson 3.1--3.4 | [Dynamic Programming Activity 1]({{site.url}}/pages/ActivityDP1) |
 | - | WED 4/08 | Approximate String Match | \*Erickson 3.7 |  |
-| - | FRI 4/10 | Subset Sum | Erickson 3.8 | |                                                                      
+| - | FRI 4/10 | No Class |  | |                                                                      
 | 12 | MON 4/13 | CKY Parsing | TBD  | [Dynamic Programming Notes]({{site.url}}/notes/DynamicProgramming.pdf) |           
 | - | WED 4/15 | Dynamic Programming Lab | | [Dynamic Programming Activity 2]({{site.url}}/pages/ActivityDP2) | 
 | - | FRI 4/17 | Intro to Complexity Theory | Erickson 12.1--12.3 | |
@@ -107,3 +107,11 @@ This assignment evaluates your ability to prove the correctness of iterative and
 **Due:** Mon. 2/16 9pm on Moodle
 
 [Instructions]({{site.url}}/hws/COMP221_HW2.pdf) | [Tex]({{site.url}}/hws/COMP221_HW2.tex)
+
+#### Homework 3
+This assignment extends our discussion of sorting to cover two additional results of interest: The $\Omega(n\log n)$ bound on comparison-based sorting and the existence of so-called linear-time sorts.
+
+**Out:** Tue. 2/23
+**Due:** Mon. 2/30 9pm on Moodle
+
+[Instructions]({{site.url}}/hws/COMP221_HW3.pdf) | [Tex]({{site.url}}/hws/COMP221_HW3.tex)

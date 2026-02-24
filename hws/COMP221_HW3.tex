@@ -15,7 +15,7 @@
 \printanswers
 
 \title{Homework 3}
-\author{COMP221 Spring 2025 - Suhas Arehalli}
+\author{COMP221 Spring 2026 - Suhas Arehalli}
 \date{}
 
 \begin{document}
@@ -29,6 +29,42 @@ If any problem is unclear, or you think you found a typo, please let me know ASA
 \section*{Problems}
 
 \begin{questions}
+    \question \textbf{Searching for Sorted Lists} \textit{(20pts)}
+    
+    Let's think about sorting as a variant of the search problem. Here, we are searching for a \textit{permutation}, or re-arrangement, of the elements that puts the array into sorted order. One thing searching through permutations lets us do is be agnostic toward the actual values of within the array --- we just want to know their relative order to sort them! 
+    
+    Lets let $P_n$ be the set of permutations of any array of length $n$ $A[1\dots n]$, where each permutation is notated as an array of \textit{indices}. That is, for $n=3$, we can write $P = [3, 2, 1]$ gives us the order $[A[3], A[2], A[1]]$. Generalizing a bit, an arbitrary permutation $P[1\dots n]$ provides us the order $[A[P[1]], A[P[2]], \dots A[P[n]]]$. For convenience, we will call this array $P(A)$
+
+    Here's our scenario for this search-for-sorting problem: At the start, we only know nothing about the relative ordering of $A[1], \dots, A[n]$. But, we can pick two values $A[i]$ and $A[j]$, $1 \leq i, j \leq n$ with $i \neq j$ and call the method \textproc{Compare} on them, and \textproc{Compare} will then return whether $A[i] < A[j]$. 
+
+    For example, if $A = [3, 1, 2]$. \textproc{Compare}($A$, $1$, $3$) returns False because $3 \nless 2$.
+
+    Each time we call \textproc{Compare}, we will gain information that will narrow the space of possible permutations of $A$ that can be in proper, sorted order. Our question will be simple: How many comparisons \textit{must} you do to find the sorted permutation? In other words, we're looking for a lower bound on the number of comparisons necessary to sort an arbitrary array A. 
+
+    While it seems like we're inventing a new, strange sorting algorithm, this actually is a a high-level description of every sorting algorithm we've seen so far! While we don't explicitly state that we're ruling out permutations in a \textsc{QuickSort} or a \textsc{MergeSort}, we do repeatedly call an equivalent of \textsc{Compare} on pairs of elements to get information on the relative ordering of elements in our input array $A$ and make decisions (swaps!) that bring us closer to being sorted. What our analysis here will argue is that we need at least $\Omega(n\log n)$ calls to \textsc{Compare} to guarantee we can even be certain what the right order of elements is. Put another way, if we don't have $\Omega(n\log n)$ calls to compare, I can construct an input that your algorithm sorts incorrectly!
+    
+    \begin{parts}
+        \part What is $\lvert P_n \rvert$? Or, equivalently, how many permutations are there of $n$ elements? \textit{(3pts)}
+
+        \part Suppose that each element in $A$ is \textit{unique}. Prove that for each permutation of $A[1\dots n]$, $P[1\dots n]$, there exists some $A$ such that $P(A)$ is sorted. That is, show that for some permutation $P = [p_!, \dots, p_n]$, there exists some $A[1\dots n]$ such that $[A[p_1], \dots, A[p_n]]$ is sorted. \textit{(7pts)}
+
+        For example, if $n = 3$, the permutation $p(A) = [A[3], A[1], A[2]]$ has a corresponding array $A = [2, 3, 1]$ that makes the permutation order sorted. Show that this holds \textit{in general}, for any $n$ and any permutation $p(A) \in P_n$.
+
+        \textbf{**HINT**}: Prove this is true \textit{by construction}: Show how you can build $A$ such that that initial array will always result in the the permutation being sorted!
+
+        \part Note that under our scheme, \textproc{Compare} is the only way for us to understand the contents of $A$\footnote{elements of $A$ should be treated like mystery boxes --- it's costs an operation to their relative order!}. By the prior part, we know that \textit{any} permutation in $P_n$ could correspond to the sorted solution. Suppose we run \textproc{Compare}$(A, i, j)$ once for some indices $i, j$ and it returns true. Can we rule out any permutations $P \in P_n$? Characterize precisely the permutations that cannot produce a sorted $P(A)$. Suppose that \textproc{Compare} returned false --- what permutations can't produce sorted $P(A)$ now? \textit{(4pts)}
+
+        \part Suppose you could \textit{partition} $P_n$ into two parts, $P_n^1$ and $P_n^2$, without knowing which permutation sorts $A$. We then discard the part that doesn't contain the permutation that sorts $A$. What strategy for choosing a partition has the best worst-case performance? \textit{(1pts)} \label{prob:bestWorstCase}
+        
+        \textbf{**Hint**}: Imagine that a devious adversary always chooses the permutation that sorts $A$ to be in the larger part of the partition. How should you design the partitions?
+
+        \part With the previous parts in mind, show that for any strategy of selecting $i, j$ to call \textsc{Compare}, There exists an $A$ such that you can rule out at most $\frac{1}{2}\lvert P_n \rvert$ permutations. \textit{(2pts)}
+
+        \part Using the prior parts,  how many calls to \textproc{Compare} do we need, at minimum, to find the right permutation? Explain, and then conclude that this gets you to an $\Omega(\log(n!)) = \Omega(n\log n)$ lower bound on runtime. 
+
+        \textbf{**Warning**}: Remember that $n$ is the length of the array, not the size of $P_n$ (look at your answer to part 1 of this question!). 
+    \end{parts}
+\newpage
     \question \textbf{An Even Quicker Return to Sorting} \textit{(20pts)}
     
     Let's develop a new kind of sorting algorithm, based on the following idea:
@@ -38,66 +74,41 @@ If any problem is unclear, or you think you found a typo, please let me know ASA
         \item Letters are \textit{totally ordered} (i.e., for any pair of characters, we know which appears first alphabetically - think \textproc{Comparable} in Java).
         \item Strings are typically sorted under \textit{lexicographic order} (``alphabetical'' order), which you get by first comparing the first letter, and if they match, you break the tie by comparing the second letter, and so on.
     \end{itemize}
-    With this, we have a fairly neat sorting strategy for an Array $A$ of strings: For each letter in the alphabet $c \in \Sigma$, gather all of the strings in an Array $A$ that have $c$ as their first letter together. You then know where these strings belong in a sorted version of $A$ relative to strings with different initial first letters (all words that start with \textit{a} come before words that start with \textit{b}, etc.), but you don't know where they belong relative to each other (i.e., you haven't sorted the group of words that start with \textit{a} amongst themselves!). Of course, you can sort all elements with the same first letter by making a recursive call that sorts each subarray that begins with the same first letter by the second letter!
+    With this, we can design a pretty clever sorting strategy for an Array $A[1\dots n]$ of strings: 
+    
+    \begin{enumerate}
+        \item For each letter in the alphabet $c \in \Sigma$, gather all of the strings in an Array $A$ that have $c$ as their first letter together (this should take $\Theta(n)$ time).
+        \item You then know where these groups of strings belong relative to groups of strings with different first letters (all words that start with \textit{a} come before words that start with \textit{b}, etc.). Put them in their respective group orders.
+        \item You don't know where they belong relative to each other (i.e., you haven't sorted the group of words that start with \textit{a} amongst themselves!). Solve this by making a recursive call that sorts all the elements that begin with the same first letter by their second letter.
+        \item Repeat until we are sorted.
+    \end{enumerate}
+
+    You'll be asked to write and analyze a sorting algorithm (\textsc{PrefixSort}) that implements this scheme. 
+    
+    For convenience, we can start with a pretty simple alphabet and some reasonable assumptions about strings, though always keep the potential for generalization in mind:
+
+    \begin{itemize}
+        \item All strings have length $k$ for some $k \in \mathbb{N}$
+        \item $\Sigma = \{0, 1\}$
+        \item The letters are ordered such that $0 < 1$ (as expected).
+    \end{itemize}
+
+    Note that, with these assumptions, we are dealing with binary strings. Moreover, they are pretty much treated like $k$-bit unsigned integers (for those who have taken computer systems). 
 
     \begin{parts}
-        \part[0] Get comfortable with the idea presented above by applying it to a list of strings. Work out the finer details before moving on.
-        \part Turn this idea into a piece of pseudocode for a function called \textproc{PrefixSort}(Array $A$) that uses a helper function \textproc{PrefixSort}(Array $A$, Integer $i$, Integer $low$, Integer $high$) that sorts $A[low \dots high]$ based on the $i$th character in each string. Perform this sort \textit{in-place}, only manipulating $A$ by \textit{Swap}-ing the positions of elements. You may assume that 
-        \begin{itemize}
-            \item $A$ has length $n$
-            \item All strings have length $\leq k$ for some $k \in \mathbb{N}$
-            \item Strings $s$ with length $k' < k$ are padded with the null character $\_ \in \Sigma$ such that for $k' < m \leq k$, $s[m] = \_$. You may refer to $k$ freely in your pseudocode.
-            \item $\Sigma = \{\_, a, b, \dots, z \}$
-            \item That the letters are ordered such that $\_ < a < b < \dots < z$
-        \end{itemize}
-        All of this padding/$\_$ business exists so that we can sort strings of different lengths, and to ensure that shorter strings that are prefixes of longer strings appear first. i.e., \textit{duck} precedes \textit{ducks}, and this is enforced mathematically by padding \textit{d-u-c-k} as \textit{d-u-c-k-}$\_$, and then noting that $\_ < s$ (the null character comes before the letter s, any any other letter for that matter!). \textit{(8pts)}
+        \part[0] Get comfortable with the idea presented above by applying it to a list of strings. Work out the finer details before moving on --- there are some ideas that you'll need to fil in, but should follow naturally.
+        
+        \part Turn this idea into a piece of pseudocode for a function called \textproc{PrefixSort}(Array $A[1\dots n]$) that uses a recursive helper function \textproc{PrefixSort}(Array $A[1\dots n]$, Integer $i$, Integer $low$, Integer $high$) that sorts $A[low \dots high]$ based on the $i$th character in each string. Perform this sort \textit{in-place}, only manipulating $A$ by \textit{Swap}-ing the positions of elements. \textit{(8pts)}
 
-        \part Write a recurrence relation for the time complexity $T(k, n)$ for this function, assuming an average-case where each input array always has a roughly equal distribution of first letters. Note that the time complexity is dependent on two factors (like you saw with graphs) --- the max-length of the strings $k$, and the length of the array $n$. \textit{(6pts)}
+        \part Write a recurrence relation for the average-case time complexity $T(k, n)$ for this function, assuming an average-case where each input array always has an equal distribution of $0$s and $1$s in each position. Note that the time complexity is dependent on two factors (like you saw with graphs in Data Structures) --- the max-length of the strings $k$, and the length of the array $n$. \textit{(6pts)}
 
         \part Consider (informally) the time complexity in the worst case, as opposed to the average-case in the previous part, using a recurrence tree. How much work is done at each level? What is the height of the tree? Propose a worst-case time complexity in Big-O notation. \textit{(6pts)}
 
         \textbf{**Hint**}: How does $k$ play into this? On a similar note, how does $i$ change in each recursive call? 
-
-    \end{parts}
-
-    \question \textbf{Searching for Sorted Lists} \textit{(20pts)}
-    
-    Let's think about sorting a bit differently --- as a variant of the search problem! Let $P_A$ be a set that contains all permutations $p$ of the $n$ elements within an Array $A$. That is, we have $n$ elements which we can shuffle into any order; $P_A$ is a set that contains every possible ordering of those $n$ elements, with each unique ordering called a \textit{permutation} of those $n$ elements. 
-
-    For example, for $A = [3, 1, 2]$, $P_A = \{[1, 2, 3], [1. 3. 2]. [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2 ,1]\}$. 
-
-    Here's our scenario for this search-for-sorting problem: At the start, we only know nothing about the relative ordering of $A[1], \dots, A[n]$. But, we can pick two values $A[i]$ and $A[j]$, $1 \leq i, j \leq n$ with $i \neq j$ and call the method \textproc{Compare} on them, and \textproc{Compare} will then return whether $A[i] < A[j]$. 
-
-    For example, if $A = [3, 1, 2]$ as above, \textproc{Compare}($A[1]$, $A[3]$) returns False because $3 \nless 2$.
-
-    Each time we call \textproc{Compare}, we will narrow the space of possible permutations of $A$ that can be in proper sorted order. Our question will be simple: How many comparisons must you do to find the sorted permutation?
-
-    Our goal is to eventually prove what was promised in class, that comparison-based sorting (i.e., and sort that orders elements by relying on calls to \textproc{Compare}) is $\Omega(n\log n)$. We'll do this by showing that even with an (impossibly) good comparison-based sorting algorithm, we can construct a worst-case input that takes order $n\log n$ time. 
-    
-    \begin{parts}
-        \part What is $\lvert P_A \rvert$? Or, equivalently, how many permutations are there of $n$ elements? \textit{(3pts)}
-
-        \part Suppose that each element in $A$ is \textit{unique}. Prove that for each permutation of $A$ $p(A) = [A[p_1], \dots, A[p_n]] \in P_A$, with $p_1, \dots, p_n$ representing the indices of $A$ in some shuffled order, there exists some $A$ such that $p(A)$ is sorted. That is, show that for some shuffled set of indices $1 \leq p_1, \dots, p_n \leq n$, there exists some $A$ of length $n$ such that $[A[p_1], \dots, A[p_n]]$ is sorted. \textit{(7pts)}
-
-        For example, if $n = 3$, the permutation $p(A) = [A[3], A[1], A[2]]$ has a corresponding array $A = [2, 3, 1]$ that makes the permutation order sorted. Show that this holds \textit{in general}, for any $n$ and any permutation $p(A) \in P_A$.
-
-        \textbf{**HINT**}: Prove this is true \textit{by construction}: Show how you can build $A$ such that that initial array will always result in the the permutation being sorted!
-
-        \part Note that under our scheme, \textproc{Compare} is the only way for us to understand the contents of $A$. By the prior part, we know that \textit{any} permutation in $P_A$ could correspond to the sorted solution. Suppose we run \textproc{Compare}$(A[i], A[j])$ once for some indices $i, j$ and it returns true. Can we rule out any permutations $p(A) \in P_A$? Characterize precisely the permutations that cannot be sorted (i.e., describe the property of $p(A)$s in $P_A$ that tells us that $p(A)$ can't be sorted once we have the result from \textproc{Compare}). Suppose that \textproc{Compare} returned false --- what permutations can't be sorted now? \textit{(4pts)}
-
-        \part Now let's get to our actual search-for-sorting argument. We are doing a \textit{worst-case} analysis for \textit{an impossibly good} comparison-based sorting algorithm. This means that we are in the following game-like scenario: We pick an $i$ and $j$ to \textproc{Compare}, and our nemesis will pick the \textit{worst} possible $A$ for this circumstance (i.e., one such that \textproc{Compare} will return the value that will minimize the number of permutations we can eliminate from the running using our logic from the prior part). Given this set-up, what is the greatest number of permutations we could possibly hope to remove from the running with one call to \textproc{Compare}? \textit{(3pts)}
         
-        \textbf{**Hint**}: Think Binary Search.
-
-        \part Assuming that you can always pick $i, j$ to eliminate the number of permutations you gave in the last part, how many calls to \textproc{Compare} do we need, at minimum, to find the right permutation? Explain, and then express this in terms of a big-$\Omega$ w.r.t. $n$. \textit{(2pts)}
-
-        \textbf{**Warning**}: Remember that $n$ is the length of the array, not the size of $P_A$ (look at your answer to part 1 of this question!). 
-
-        \textbf{**Hint**}: You may need to use an identity from the textbook to reduce the order of the time complexity you found.
-
         \part If all of the above is true, and all that you showed in the previous problem are true, there should be something that appears contradictory on first glance (double check your answers if not!). Explain why there isn't actually a problem here. \textit{(1pt)}
-    \end{parts}
 
+    \end{parts}
 \end{questions}
 
 \end{document}
