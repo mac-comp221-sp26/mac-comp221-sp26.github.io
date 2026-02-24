@@ -47,7 +47,7 @@ The schedule below will be updated to keep track of all released course material
 | - | WED 2/18 | Sorting: QuickSort | \*Erickson 1.5, Preview [QuickSort Notes]({{site.url}}/notes/QuickSort.pdf) | [Optional Activity: Partition and Quicksort](pages/ActivityQS) |
 | - | FRI 2/20 | **Exam 1** |  | |
 | 5 | MON 2/23 | Divide & Conquer (Binary Search) | Erickson 1.6 | [Activity: Binary Search Variants](pages/ActivityBS) [Binary Search Notes]({{site.url}}/notes/BinarySearch.pdf) |
-| - | WED 2/25 | The Master Theorem | \*Erickson 1.7, Preview [Master Theorem Notes]({{site.url}}/notes/MasterThm.pdf) | [Activity: Master Theorem](pages/ActivityMT) | 
+| - | WED 2/25 | The Master Theorem | \*Erickson 1.7, Preview [Master Theorem Notes]({{site.url}}/notes/MasterTheorem.pdf) | [Activity: Master Theorem](pages/ActivityMT) | 
 | - | FRI 2/27 | More Divide & Conquer Design  | Erickson 1.9--1.10 | [Activity: Divide & Conquer](pages/ActivityDC) |
 | 6 | MON 3/02 | Greedy Algorithms | Erickson 4.1--4.3 | |
 | - | WED 3/04 | Graphs: BFS | Skim Erickson 5.1--5.4, Then \*Erickson 8.1--8.4  | [BFS  Notes]({{site.url}}/notes/BFS.pdf)  |
