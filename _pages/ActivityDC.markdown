@@ -15,7 +15,7 @@ You will work towards being able to...
 
 ## Warm-Up
 
-1. Apply the master theorem to solve the following recurrences. Note the case we fall into and the resulting closed form.
+1. Apply the master theorem to solve the following recurrences. Note the case we fall into and the resulting closed form. Assume for all of these that for $n \leq k$ for some constant k, $T(n) \in \Theta(1)$ (i.e., I only give you the recursive case for $n > k$). 
 
     - $T(n) = 4T(\frac{n}{2}) + 2n^2$ 
     - $T(n) = 3T(\frac{n}{2}) + 7n$ 
