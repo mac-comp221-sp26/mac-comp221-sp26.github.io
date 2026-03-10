@@ -115,3 +115,11 @@ This assignment extends our discussion of sorting to cover two additional result
 **Due:** Mon. 2/30 9pm on Moodle
 
 [Instructions]({{site.url}}/hws/COMP221_HW3.pdf) | [Tex]({{site.url}}/hws/COMP221_HW3.tex)
+
+#### Homework 4
+This assignment has you analyze greedy strategies and invites you to extend the relaxation approach to Dijkstra's algorithm to an online setting where a shortest path tree must be maintained as edges change.
+
+**Out:** Tue. 3/10
+**Due:** Tue. 3/24 9pm on Moodle
+
+[Instructions]({{site.url}}/hws/COMP221_HW4.pdf) | [Tex]({{site.url}}/hws/COMP221_HW4.tex)

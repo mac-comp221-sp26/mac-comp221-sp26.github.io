@@ -10,6 +10,7 @@
 \usepackage{listings}
 \usepackage{mathtools}
 \usepackage{hyperref}
+\usepackage{framed}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
@@ -28,8 +29,8 @@
 
 \printanswers
 
-\title{Homework 4}
-\author{COMP221 Spring 2025 - Suhas Arehalli}
+\title{Homework 4: Greedy Algorithms and SSSP}
+\author{COMP221 Spring 2026 - Suhas Arehalli}
 \date{}
 
 \begin{document}
@@ -43,60 +44,75 @@ If any problem is unclear, or you think you found a typo, please let me know ASA
 \section*{Problems}
 
 \begin{questions}
-    \question \textbf{Making Change} 
-    
-    Suppose you are a cashier making change for a customer. Consider the following problem description for the problem of providing change with the fewest number of coins:
-    \begin{probstate}[Minimal Change Set]
-        \textbf{Input:} $k \in \mathbb{Z}$, a number of cents, and $C = \{c_1, \dots c_n\} \subseteq \mathbb{Z}_+$. 
-        
-        \textbf{Output:} A multi-set (set that allows duplicates) $L$ such that 
-        \begin{itemize}
-            \item $\forall c \in L, c \in C$
-            \item $\sum_{c \in L} c = k$
-            \item $\lvert L \rvert$ is minimized.
-        \end{itemize}
-        if such a set exists. $NULL$ otherwise.
+    \question \textbf{Other Kinds of Greed} (\textit{Based on Erickson Ch.4 Prob. 1})
+
+    Recall that the greedy scheduling problem in Erickson 4.2 is the defined (somewhat informally) as follows: 
+
+    \begin{probstate}[Scheduling]
+        \textbf{Input:} A set of $n$ events with start/end times $E = \{(s_1, e_1), \dots, (s_n, e_n)\}$ \\
+        \textbf{Output:} The largest $X \subseteq E$ such that no events in $X$ overlap.
     \end{probstate}
-    That is, I need you to find the fewest possible coins such that the values of those coins add up to $k$. 
 
-    You might have seen in Discrete Math that a greedy strategy --- adding the largest coin that doesn't go over $k$ --- works for US coin denominations (i.e., the case where $C = \{1, 5, 10, 25\}$. In fact, you can prove this correct using a clever, but tedious exchange argument.
-    \begin{parts}
-        
-        \part Prove via counterexample that the greedy strategy will not work for all sets of coin denominations $C$. That is, construct $C$ such that the greedy approach fails to find the minimal choice of coins.
-
-        \part Describe the solution to this problem in terms of a recurrence relation. For simplicity, write a solution that finds the \textbf{size} of the optimal set rather than constructing the set itself.
-
-        \textit{**HINT**:} Think carefully about how to frame the problem as a sequential decision process. It may be helpful to think about a way to avoid the mistake a greedy algorithm makes on your counterexample in the prior part, or to consider the subset sum problem.
-
-        \part Provide pseudocode for a dynamic programming algorithm that computes the \textbf{minimum number of coins} needed to make $k$ units of change that works for \textit{any} coin system. For full points, provide a solution that runs in $O(k\lvert C \rvert)$ time and $O(k)$ space. A solution with a worse space complexity can still get the majority of points.
-
-    \end{parts}
-    \question \textbf{Degree-Constrained Spanning Trees} \textit{(Based on Skiena 11-12)}
-    
+    For each of the following greedy strategies to build a schedule, either prove that the strategy works via exchange argument or prove the strategy does not work via counterexample. You may assume ties can be broken either way.
 
     \begin{parts}
-        \part The low-degree spanning tree problem (\textproc{Low-Degree-Span}) is a decision problem defined as follows:
-        \begin{probstate}[\textproc{Low-Degree-Span}]
-            \textbf{Input:} An undirected graph $G = (V, E)$ and $k \in \mathbb{Z}_{\geq 0}$
-        
-            \textbf{Output:} TRUE iff there exists a spanning tree where each vertex in the tree has degree $\leq k$. FALSE otherwise.
-        \end{probstate}
-        Prove (using a Karp reduction) that \textproc{Low-Degree-Span} is NP-hard. Make sure you provide both a description of the reduction and a brief justification of the correctness of the reduction as part of your answer.
+        \part[6] (Repeatedly) select the event with the latest end time that doesn't conflict with events we've chosen so far.
 
-        \textbf{**Hint**:} Skim through the NP-hard problems we've seen so far and see which ones seem most similar. Then try and construct a reduction in the appropriate direction.
-
+        \part[6] (Repeatedly) select the event with the latest start time that doesn't conflict with events we've chosen so far.
         
-        \part Consider the \textit{high-degree spanning tree problem} (\textproc{High-Degree-Span}) which is defined as follows:
-        \begin{probstate}[\textproc{High-Degree-Span}]
-            \textbf{Input:} An undirected graph $G = (V, E)$ and $k \in \mathbb{Z}_{\geq 0}$.
-            
-            \textbf{Output:} TRUE if $G$ contains a spanning tree which contains a vertex with degree $\geq k$ (within the spanning tree). FALSE otherwise.
-        \end{probstate} 
-        Show that \textproc{High-Degree Span} is in P by providing pseudocode for a polynomial-time algorithm to solve this problem. 
+        \part[6] (Repeatedly) select the event with the shortest duration that doesn't conflict with events we've chosen so far. 
 
-        \textbf{**Hint**}: Consider methods we've seen before that have you construct spanning trees in a graph!
-        
+        \part[2] (Repeatedly) select the event that doesn't conflict with events we've chosen so far and has the fewest conflicts with yet-to-be-chosen events. 
+
+        \textbf{**HINT**:} Despite appearances, this strategy does \textit{not} find optimal schedules. Find a counterexample!
+
     \end{parts}
+
+    \question \textbf{Maintaining Relaxation}
+
+    You can compute shortest path distances sing Dijkstra's (or Bellman-Ford, etc.), but these algorithms take a not-insignificant amount of time (an optimized version of Dijkstra's takes $\Theta(E + V\log V)$ time with no negative edge weights, and less optimized versions like ours are are worse). This means that in practice, we don't want to have to recompute shortest paths when we don't actually need to. This is particularly true when we may consider re-using our shortest path algorithm over a graph that is only minimally different from one which we've already computed shortest paths over! 
+
+    Suppose you are given a (directed) Graph $G = (V, E)$, a weight function $W: E \to R$ (i.e., non-negative weights), a source vertex $s \in V$. You may assume there are no negative-weight cycles.
+
+    \begin{parts}
+        \part[8] Suppose you are also given a map $d$ where $d(v) = \delta(s,v)$. Then an edge $e \in E$ decreases weight: You are given $w': E \to \mathbb{R}$ such that for some $c \geq 0$ \textbf{and} the edge $e$ that has been modified.
+        \begin{align*}
+            w'(u,v) = \begin{cases}
+                w(u,v), & (u,v) \neq e \\
+                w(u,v) - c, &(u,v) = e
+            \end{cases}
+        \end{align*}
+        Construct an algorithm $\Call{StillShortest}{G, d, w', e}$ that runs in $\Theta(1)$ time to determine if $d$ still contains shortest paths for $G$ under $w'$ (rather than $w$). \label{4:decrease-weight}
+
+
+        \part[2] Write a (short) proof of correctness for your algorithm. You should reference results we've seen in class/the textbook, but make sure you understand when they apply!
+
+
+        \part[3] Consider a different scenario: Suppose add a new edge $(u,v)$ to $E$ for $u,v \in V$ and assign it a new weight $w(e) = c$. Write an algorithm to determine whether we need to update our shortest path distances $d$.
+
+       \textbf{ **HINT**:} For any graph $G = (V, E)$ with weights $w: E \to \mathbb{R}$, consider the complete graph $G_c = (V, V^2)$ where 
+
+        \begin{align*}
+            w_c(u,v) = \begin{cases}
+                w(u,v), &(u,v) \in E \\
+                \infty, &(u,v) \notin E
+            \end{cases}
+        \end{align*}
+
+        Are shortest paths any different between $G_c$ with $w_c$ and $G$ with $w$? With that in mind, how does the scenario in this part compare to (\ref{4:decrease-weight})?
+
+
+        \part[2] Suppose we have the weights of some edges modified (either increased or decreased!), but this time we maintain not just $d: V \to \mathbb{R} \cup \{\infty\}$, but $\pi: V \setminus \{s\} \to V$, which maps a vertex to it's parent in the shortest path tree in the original graph (pre-modification!). Note (1) what can go wrong if we \textit{increase} the weights of graphs and (2) describe how $\pi$ solves this problem. 
+
+
+        \part[3] Now consider a new (but related!) problem: Suppose we are given a graph $G=(V,E)$, $w: E \to \mathbb{R}$, and a parent function $\pi: V \setminus \{s\} \to V$. Write an algorithm to determine whether $\pi$ defines a single-source shortest path tree rooted at $s$. 
+
+
+        \part[2] What is the runtime of your algorithm? Remember to consider both the number of vertices and edges in the graph!
+
+
+    \end{parts}
+
 \end{questions}
 
 \end{document}
