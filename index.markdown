@@ -53,8 +53,8 @@ The schedule below will be updated to keep track of all released course material
 | - | WED 3/04 | Graphs: BFS | Skim Erickson 5.1--5.4, Then \*Erickson 8.1--8.4  | [BFS  Notes]({{site.url}}/notes/BFS.pdf)  |
 | - | FRI 3/06 | **Capstones** | | |
 | 7 | MON 3/09 | SSSP: Dijkstra's | Erickson 8.6 + Skim [Dijkstra Notes]({{site.url}}/notes/Dijkstra.pdf) | |
-| - | WED 3/11 | MSTs: Prims | \*Erickson 7.1--7.2, 7.4, Preview [MST  Notes]({{site.url}}/notes/MSTs.pdf) on Prim's | |
-| - | FRI 3/13 | MSTs: Kruskal's & Union-Find | Erickson 7.5, Preview [MST Notes]({{site.url}}/notes/MSTs.pdf) on Kruskal's | |
+| - | WED 3/11 | MSTs: Prims | Erickson 7.1--7.2, 7.4, Preview [MST  Notes]({{site.url}}/notes/MSTs.pdf) on Prim's | |
+| - | FRI 3/13 | MSTs: Kruskal's & Union-Find | \*Erickson 7.5, Preview [MST Notes]({{site.url}}/notes/MSTs.pdf) on Kruskal's | |
 | 8 | - | **SPRING BREAK** | | |
 | 9 | MON 3/23 | APSP: Floyd-Warshall | Erickson 9.1--9.2, 9.8 | |
 | - | WED 3/25 | No Class (Supplement TBD) | Erickson 10.1 -- 10.3 | [Ford-Fulkerson Notes]({{site.url}}/notes/NetworkFlow.pdf) |
