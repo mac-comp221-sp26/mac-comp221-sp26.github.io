@@ -57,7 +57,7 @@ The schedule below will be updated to keep track of all released course material
 | - | FRI 3/13 | MSTs: Kruskal's & Union-Find | \*Erickson 7.5, Preview [MST Notes]({{site.url}}/notes/MSTs.pdf) on Kruskal's | |
 | 8 | - | **SPRING BREAK** | | |
 | 9 | MON 3/23 | APSP: Floyd-Warshall | Erickson 9.1--9.2, 9.8 | |
-| - | WED 3/25 | No Class (Supplement TBD) | Erickson 10.1 -- 10.3 | [Ford-Fulkerson Notes]({{site.url}}/notes/NetworkFlow.pdf) |
+| - | WED 3/25 | No Class (Video Lecture on Moodle!) | Erickson 10.1 -- 10.3 | [Ford-Fulkerson Notes]({{site.url}}/notes/NetworkFlow.pdf) |
 | - | FRI 3/27 | No Class |  | |
 | 10 | MON 3/30 | Ford-Fulkerson | 10.4 -- 10.6 | |
 | - | WED 4/01 | **Exam 2** | | |
