@@ -38,5 +38,4 @@ Suppose you have a set of cities and of roads connecting pairs of cities. For ea
 Suppose you would like to assign $n$ tasks to $k$ people. Every person has some number of tasks that they can do, but they can only be assigned to one of them. Every task only needs a single person, so assigning multiple people the same job is useless. You would like to figure out, given this arrangement, the number of jobs that can get done. 
 
 ### Submission
-Submit an artifact of your work for one of the two problems.
-
+No submission required, but I will expect that you are comfortable with the first two problems, and have actively thought about the final 3.
