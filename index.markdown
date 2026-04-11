@@ -65,7 +65,7 @@ The schedule below will be updated to keep track of all released course material
 | 11 | MON 4/06 | Dynamic Programming | Erickson 3.1--3.4 | [Dynamic Programming Activity 1]({{site.url}}/pages/ActivityDP1) |
 | - | WED 4/08 | Approximate String Match | \*Erickson 3.7 |  |
 | - | FRI 4/10 | No Class |  | [Dynamic Programming Activity 2]({{site.url}}/pages/ActivityDP2)|                                                                      
-| 12 | MON 4/13 | CKY Parsing | TBD  | [Dynamic Programming Notes]({{site.url}}/notes/DynamicProgramming.pdf) |           
+| 12 | MON 4/13 | CKY Parsing | Skiena 10.8 (Moodle) | [Dynamic Programming Notes]({{site.url}}/notes/DynamicProgramming.pdf) |           
 | - | WED 4/15 | Dynamic Programming Lab | | [Dynamic Programming Activity 3]({{site.url}}/pages/ActivityDP3) | 
 | - | FRI 4/17 | Intro to Complexity Theory | Erickson 12.1--12.3 | |
 | 13 | MON 4/20 | Reduction as a Proof Technique | \*Erickson 12.5--12.6 | |
