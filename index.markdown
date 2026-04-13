@@ -123,3 +123,14 @@ This assignment has you analyze greedy strategies and invites you to extend the 
 **Due:** Tue. 3/24 9pm on Moodle
 
 [Instructions]({{site.url}}/hws/COMP221_HW4.pdf) | [Tex]({{site.url}}/hws/COMP221_HW4.tex)
+
+
+### Final Report & Presentation
+This assignment asks you to select an algorithm not covered in this course and prepare a short (3--5 pages)  primer and presentation on it, it's correctness, and efficiency relative to a naive solution. Full instructions and a sample report are provided below.
+
+**Out:** Mon 4/13 \\ 
+**Proposal Due:**: Mon 4/20 9pm. \\
+**Report Peer-Review:** Mon 5/1 in-class \\
+**Presentations/Report Due:** Final Exam Timeslot.
+
+[Instructions]({{site.url}}/hws/FinalReportInstructions.pdf) | [Sample]({{site.url}}/hws/FinalReportSample.tex)
