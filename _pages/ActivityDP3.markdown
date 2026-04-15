@@ -25,6 +25,17 @@ For example, `T^F|T` can be parenthesized 2 ways: `(T|F)^T` evaluates to F but `
 > </details>
 {: .block-tip }
 
+### **Inter-leavened b***re***ad**
+Given three string $s_1, s_2, s$, determine whether $s$ is simply the two strings $s_1$ and $s_2$ *interleaved*. 
+
+This is easier to explain via example: **p***a***re***n* is *an* and **pre** interleaved: All of the letters of both $s_1, s_2$ appear in $s$, in-order, but with the letters of the other word mixed in-between. This gets tricky though --- for the strings "arid" and "anger" you should be able to match both "arangerid" and "angarierd" -- note the initial a must belong to a differing $s_1, s_2$ in each $s$!
+> <details>
+>    <summary> Reveal/hide hint</summary>
+> This is like edit distance! Think of this like a sequential decision process: What decision do you make for each letter of $s$? Set that up as a recurrence relation!
+> </details>
+{: .block-tip }
+
+
 ### **Cut the cord**
 Suppose you have $n$ feet of an extraordinarily valuable rope, where a rope of length $i$ is worth $c[i]$ dollars. Note that it is **not** priced by the foot: prices can be any value for any length, with the one exception that a rope of length 0 is worth $0. Determine the most money you can make by splitting your rope. 
 
@@ -42,20 +53,9 @@ You an a friend are playing a game using a board represented by an deque of inte
 For example, if the deque contains [8 20 1 7], optimal play would be to choose 7, have your opponent choose 8, then take 20, then your opponent gets 1, earning you a score of 27. Note that greedy play (selecting 8 over 7 in the first move) is *suboptimal* here, as it allows the opponent to access the valuable 20! 
 > <details>
 >    <summary> Reveal/hide hint</summary>
-> Consider that both players must play optimally, but the game is symmetric. Build a recurrance that tracks *both* player's scores! 
+> Consider that both players must play optimally, but the game is symmetric. Build a recurrence that tracks *both* player's scores! 
 > </details>
 {: .block-tip }
-
-
-### **Inter-leavened b***re***ad**
-Given three string $s_1, s_2, s$, determine whether $s$ is simply the two strings $s_1$ and $s_2$ *interleaved*. 
-
-This is easier to explain via example: **p***a***re***n* is *an* and **pre** interleaved: All of the letters of both $s_1, s_2$ appear in $s$, in-order, but with the letters of the other word mixed in-between. This gets tricky though --- for the strings "arid" and "anger" you should be able to match both "arangerid" and "angarierd" -- note the initial a must belong to a differing $s_1, s_2$ in each $s$!
-    > <details>
-    >    <summary> Reveal/hide hint</summary>
-    > This is like edit distance! What "decision" should you make for each letter in $s$?
-    > </details>
-    {: .block-tip }
 
 
 #### Submission
