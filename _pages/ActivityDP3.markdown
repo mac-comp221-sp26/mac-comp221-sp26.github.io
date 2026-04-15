@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Activity: Dynamic Programming Practice 2"
+title: "Activity: Dynamic Programming Practice 3"
 categories: Activity dynamic programming dp 
 ---
 
