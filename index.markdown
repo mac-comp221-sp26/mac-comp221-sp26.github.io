@@ -124,6 +124,12 @@ This assignment has you analyze greedy strategies and invites you to extend the 
 
 [Instructions]({{site.url}}/hws/COMP221_HW4.pdf) | [Tex]({{site.url}}/hws/COMP221_HW4.tex)
 
+#### Homework 5
+This assignment has you solve one (1) Dynamic Programming problem. 
+**Out:** Thu. 4/16
+**Due:** Weds. 4/22 9pm on Moodle
+
+[Instructions]({{site.url}}/hws/COMP221_HW5.pdf) | [Tex]({{site.url}}/hws/COMP221_HW5.tex)
 
 ### Final Report & Presentation
 This assignment asks you to select an algorithm not covered in this course and prepare a short (3--5 pages)  primer and presentation on it, it's correctness, and efficiency relative to a naive solution. Full instructions and a sample report are provided below.
@@ -133,4 +139,4 @@ This assignment asks you to select an algorithm not covered in this course and p
 **Report Peer-Review:** Mon 5/1 in-class \\
 **Presentations/Report Due:** Final Exam Timeslot.
 
-[Instructions]({{site.url}}/hws/FinalReportInstructions.pdf) | [Sample]({{site.url}}/hws/FinalReportSample.tex)
+[Instructions]({{site.url}}/hws/FinalReportInstructions.pdf) | [Sample]({{site.url}}/hws/FinalReportSample.pdf)
