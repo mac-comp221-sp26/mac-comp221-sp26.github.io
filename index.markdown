@@ -70,7 +70,7 @@ The schedule below will be updated to keep track of all released course material
 | - | FRI 4/17 | Intro to Complexity Theory | Erickson 12.1--12.3 | [On faster SSSP algorithms](https://www.quantamagazine.org/new-method-is-the-fastest-way-to-find-the-best-routes-20250806/) |
 | 13 | MON 4/20 | Reduction as a Proof Technique | \*Erickson 12.5--12.6 | [Generalized Minesweeper](https://sarehalli.github.io/pages/GenMS/minesweep.html) |
 | - | WED 4/22 | More NP Reductions | \*Erickson 12.6--12.9 |  |
-| - | FRI 4/24 | Flex Day | | |
+| - | FRI 4/24 | More Reduction Practice? | Skim Erickson 12.10--12.12 | |
 | 14 | MON 4/27 | Complexity Lab | Erickson 12.13--12.14 | [Complexity Theory Notes]({{site.url}}/notes/ComplexityTheoryAndReductions.pdf) |
 | - | WED 4/29 | Approximate/Random Methods for Hard Problems | TBD | |
 | - | FRI 5/01 | Report Peer Review   | | |
@@ -126,6 +126,7 @@ This assignment has you analyze greedy strategies and invites you to extend the 
 
 #### Homework 5
 This assignment has you solve one (1) Dynamic Programming problem. 
+
 **Out:** Thu. 4/16
 **Due:** Weds. 4/22 9pm on Moodle
 
