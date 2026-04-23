@@ -1,0 +1,72 @@
+\documentclass{exam}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{geometry}[border=1in]
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newtheoremstyle{prob}% name 
+{7pt}% Space above 
+{7pt}% 
+{}% 
+{0pt}%Indent amount 1 
+{\bfseries}% Theorem head font 
+{.}% 
+{\newline}% 
+{}%
+
+\theoremstyle{prob}
+\newtheorem*{probstate}{PROBLEM}
+
+\printanswers
+
+\title{Homework 6}
+\author{COMP221 Spring 2026 - Suhas Arehalli}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Complete the problem below. Check the course website \& syllabus for further instructions.
+
+If any problem is unclear, or you think you found a typo, please let me know ASAP so I can clarify!
+
+\section*{Problems}
+
+\begin{questions}
+    \question \textbf{Degree-Constrained Spanning Trees} \textit{(Based on Skiena 11-12)}
+    
+    \begin{parts}
+        \part The low-degree spanning tree problem (\textproc{Low-Degree-Span}) is a decision problem defined as follows:
+        \begin{probstate}[\textproc{Low-Degree-Span}]
+            \textbf{Input:} An undirected graph $G = (V, E)$ and $k \in \mathbb{Z}_{\geq 0}$
+        
+            \textbf{Output:} TRUE iff there exists a spanning tree where each vertex in the tree has degree $\leq k$. FALSE otherwise.
+        \end{probstate}
+        Prove (using a reduction) that \textproc{Low-Degree-Span} is NP-hard. Make sure you provide both a description of the reduction and a brief justification of the correctness of the reduction as part of your answer.
+
+        \textbf{**Hint**:} Skim through the NP-hard problems you've seen so far (including those in the textbook we didn't discuss in class!). Which involve trees with constrained degree? This might require some clever thinking!
+        
+        \part Consider the \textit{high-degree spanning tree problem} (\textproc{High-Degree-Span}) which is defined as follows:
+        \begin{probstate}[\textproc{High-Degree-Span}]
+            \textbf{Input:} An undirected graph $G = (V, E)$ and $k \in \mathbb{Z}_{\geq 0}$.
+            
+            \textbf{Output:} TRUE if $G$ contains a spanning tree which contains a vertex with degree $\geq k$ (within the spanning tree). FALSE otherwise.
+        \end{probstate} 
+        Show that \textproc{High-Degree Span} is in P.
+
+        \textbf{**Hint**}: Think through what graph methods we've seen that create spanning trees. Can one force 
+        
+    \end{parts}
+\end{questions}
+
+\end{document}

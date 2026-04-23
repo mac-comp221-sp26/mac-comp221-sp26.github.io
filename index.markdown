@@ -132,6 +132,14 @@ This assignment has you solve one (1) Dynamic Programming problem.
 
 [Instructions]({{site.url}}/hws/COMP221_HW5.pdf) | [Tex]({{site.url}}/hws/COMP221_HW5.tex)
 
+#### Homework 6
+This assignment has you solve one (1) Complexity problem with two parts, both related to spanning trees on Graphs. 
+
+**Out:** Thu. 4/23
+**Due:** Weds. 4/29 9pm on Moodle
+
+[Instructions]({{site.url}}/hws/COMP221_HW6.pdf) | [Tex]({{site.url}}/hws/COMP221_HW6.tex)
+
 ### Final Report & Presentation
 This assignment asks you to select an algorithm not covered in this course and prepare a short (3--5 pages)  primer and presentation on it, it's correctness, and efficiency relative to a naive solution. Full instructions and a sample report are provided below.
 
