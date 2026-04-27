@@ -33,25 +33,25 @@ Prove that the Dense Subgraph problem is NP-Complete.
 
 ### (Integer) Partition
 
-**Problem**: (*Partition*) \\ 
+**Problem** (*Partition*): \\ 
 **Input**: A multiset of integers $S$ \\
-**Output**: True if there exists a partition of $S$ into $S_1, S_2$ such that $\sum_{s \in S_1} s = \sum_{s \in S_2}$.
+**Output**: True if there exists a partition of $S$ into $S_1, S_2$ such that $\sum_{s \in S_1} s = \sum_{s \in S_2} s$.
 
 Prove that the Partition problem is NP-Complete. 
 
 ### Double SAT
 
-**Problem**: (*Double SAT*) \\
-**Input**: A boolean formula $\phi$ \\
-**Output**: True if there are two unique satisfying assignments for $\phi$. 
+**Problem** (*Double SAT*): \\
+**Input**: A boolean formula $\varphi$ \\
+**Output**: True if there are two unique satisfying assignments for $\varphi$. 
 
 Prove that the Double SAT problem is NP-Complete. 
 
 ### Kite 
 
-**Problem**: (*Kite*) \\ 
+**Problem** (*Kite*): \\
 **Input**: A graph $G$, Integer $k$ \\
-**Output**: True if there exists a subgraph that forms a *kite* of size $k$ --- a clique of size $k$ with a "tail" of $k$ nodes in a chain. 
+**Output**: True if there exists a subgraph that forms a *kite* of size $k$ (a clique of size $k$ with a "tail" of $k$ nodes in a chain). 
 
 Prove that the Kite problem is NP-Complete. 
 
