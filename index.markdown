@@ -72,7 +72,7 @@ The schedule below will be updated to keep track of all released course material
 | - | WED 4/22 | More NP Reductions | \*Erickson 12.6--12.9 |  |
 | - | FRI 4/24 | More Reduction Practice? | Skim Erickson 12.10--12.12 | |
 | 14 | MON 4/27 | Complexity Lab | Erickson 12.13--12.14 | [Complexity Activity]({{site.url}}/pages/ActivityComplexity), [Complexity Theory Notes]({{site.url}}/notes/ComplexityTheoryAndReductions.pdf) |
-| - | WED 4/29 | Approximate/Random Methods for Hard Problems | TBD | |
+| - | WED 4/29 | Approximate/Random Methods for Hard Problems | Erickson J.1--J.3, J.5, Skim J.8--9 | |
 | - | FRI 5/01 | Report Peer Review   | | |
 | 15 | MON 5/04 | **Exam 3** | | |
 | FINALS | THU 5/07 <br> 1:30--3:30pm | Section 01 Final | | |
@@ -145,7 +145,7 @@ This assignment asks you to select an algorithm not covered in this course and p
 
 **Out:** Mon 4/13 \\ 
 **Proposal Due:**: Mon 4/20 9pm. \\
-**Report Peer-Review:** Mon 5/1 in-class \\
+**Report Peer-Review:** Fri 5/1 in-class \\
 **Presentations/Report Due:** Final Exam Timeslot.
 
 [Instructions]({{site.url}}/hws/FinalReportInstructions.pdf) | [Sample]({{site.url}}/hws/FinalReportSample.pdf)
