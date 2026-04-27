@@ -33,7 +33,7 @@ Prove that the Dense Subgraph problem is NP-Complete.
 
 ### (Integer) Partition
 
-**Problem** (*Partition*): \\ 
+**Problem** (*Partition*): \\
 **Input**: A multiset of integers $S$ \\
 **Output**: True if there exists a partition of $S$ into $S_1, S_2$ such that $\sum_{s \in S_1} s = \sum_{s \in S_2} s$.
 
