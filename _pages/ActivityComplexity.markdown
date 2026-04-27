@@ -25,32 +25,32 @@ Re-familiarize yourself with the following problems: SAT, 3-SAT, Hamiltonian Cyc
 
 ### Dense Subgraph
 
-**Problem** (*Dense Subgraph*):
-**Input**: A Graph $G = (V, E)$, Integers $k$, $y$
+**Problem** (*Dense Subgraph*): \\
+**Input**: A Graph $G = (V, E)$, Integers $k$, $y$ \\
 **Output**: True if there exists a subgraph $G' = (V', E')$ of $G$ where $\lvert V' \rvert = k$ and $\lvert E' \rvert \geq y$. 
 
 Prove that the Dense Subgraph problem is NP-Complete. 
 
 ### (Integer) Partition
 
-**Problem**: (*Partition*)
-**Input**: A multiset of integers $S$
+**Problem**: (*Partition*) \\ 
+**Input**: A multiset of integers $S$ \\
 **Output**: True if there exists a partition of $S$ into $S_1, S_2$ such that $\sum_{s \in S_1} s = \sum_{s \in S_2}$.
 
 Prove that the Partition problem is NP-Complete. 
 
 ### Double SAT
 
-**Problem**: (*Double SAT*)
-**Input**: A boolean formula $\phi$
+**Problem**: (*Double SAT*) \\
+**Input**: A boolean formula $\phi$ \\
 **Output**: True if there are two unique satisfying assignments for $\phi$. 
 
 Prove that the Double SAT problem is NP-Complete. 
 
 ### Kite 
 
-**Problem**: (*Kite*)
-**Input**: A graph $G$, Integer $k$
+**Problem**: (*Kite*) \\ 
+**Input**: A graph $G$, Integer $k$ \\
 **Output**: True if there exists a subgraph that forms a *kite* of size $k$ --- a clique of size $k$ with a "tail" of $k$ nodes in a chain. 
 
 Prove that the Kite problem is NP-Complete. 
