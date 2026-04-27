@@ -143,7 +143,7 @@ This assignment has you solve one (1) Complexity problem with two parts, both re
 ### Final Report & Presentation
 This assignment asks you to select an algorithm not covered in this course and prepare a short (3--5 pages)  primer and presentation on it, it's correctness, and efficiency relative to a naive solution. Full instructions and a sample report are provided below.
 
-**Out:** Mon 4/13 \\ 
+**Out:** Mon 4/13 \\
 **Proposal Due:**: Mon 4/20 9pm. \\
 **Report Peer-Review:** Fri 5/1 in-class \\
 **Presentations/Report Due:** Final Exam Timeslot.
