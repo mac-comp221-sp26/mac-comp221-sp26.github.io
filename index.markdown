@@ -71,7 +71,7 @@ The schedule below will be updated to keep track of all released course material
 | 13 | MON 4/20 | Reduction as a Proof Technique | \*Erickson 12.5--12.6 | [Generalized Minesweeper](https://sarehalli.github.io/pages/GenMS/minesweep.html) |
 | - | WED 4/22 | More NP Reductions | \*Erickson 12.6--12.9 |  |
 | - | FRI 4/24 | More Reduction Practice? | Skim Erickson 12.10--12.12 | |
-| 14 | MON 4/27 | Complexity Lab | Erickson 12.13--12.14 | [Complexity Theory Notes]({{site.url}}/notes/ComplexityTheoryAndReductions.pdf) |
+| 14 | MON 4/27 | Complexity Lab | Erickson 12.13--12.14 | [Complexity Activity]({{site.url}}/pages/ActivityComplexity), [Complexity Theory Notes]({{site.url}}/notes/ComplexityTheoryAndReductions.pdf) |
 | - | WED 4/29 | Approximate/Random Methods for Hard Problems | TBD | |
 | - | FRI 5/01 | Report Peer Review   | | |
 | 15 | MON 5/04 | **Exam 3** | | |
